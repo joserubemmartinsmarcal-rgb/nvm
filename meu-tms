@@ -1,2 +1,3 @@
 mkdir meu-tms
 cd meu-tms
+npx create-next-app@latest . --typescript --tailwind --git
