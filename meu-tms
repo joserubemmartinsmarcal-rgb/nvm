@@ -4,3 +4,4 @@
 	--typescript --tailwind --git
 npx create-next-app@latest . --typescript --tailwind --git --eslint --skip-git && npm install bcryptjs && npm install -D @types/bcryptjs && npm install prisma @prisma/client && npm install next-auth axios recharts zod react-hook-form
 	npx prisma migrate dev --name init
+	added XXX packages
