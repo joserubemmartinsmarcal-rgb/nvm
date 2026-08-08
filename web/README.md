@@ -19,7 +19,7 @@ web/middleware.ts                  ->  meu-tms/middleware.ts
 ## Dependências
 
 ```bash
-npm install @supabase/supabase-js '@supabase/ssr@>=0.12'
+npm install @supabase/supabase-js '@supabase/ssr@>=0.12' server-only
 ```
 
 > **Não use `@supabase/ssr` 0.5.x.** A assinatura genérica daquela versão não
@@ -38,6 +38,18 @@ No `.env.local` do `meu-tms`:
 NEXT_PUBLIC_SUPABASE_URL=https://<project-ref>.supabase.co
 NEXT_PUBLIC_SUPABASE_ANON_KEY=<anon key>
 ```
+
+Para responder o cliente pelo TMS, também:
+
+```
+WHATSAPP_PHONE_NUMBER_ID=<id do número na WABA>
+WHATSAPP_TOKEN=<token de acesso permanente>
+WHATSAPP_API_VERSION=v21.0
+```
+
+Essas três **não** levam `NEXT_PUBLIC_`: são segredos de servidor. O
+`lib/whatsapp.ts` importa `server-only`, então a build quebra se alguém tentar
+usá-lo em componente de cliente.
 
 A chave **anônima**, não a service role. A leitura é autorizada pela RLS da
 tabela: a policy libera `select` para `authenticated`, então o app só enxerga os
@@ -66,6 +78,19 @@ deixa de vir da RLS (passaria a ser service role + checagem no app), e o
 - **Localização** compartilhada vira link do Google Maps.
 - **Idade do chamado** ("há 12 min") ao lado da data, que é o que importa no
   plantão.
+- **Responder o cliente** sem sair da tela, com o histórico gravado em
+  `chamado_mensagens` — inclusive as tentativas que falharam, com o motivo.
+
+### A janela de 24 horas
+
+O WhatsApp só aceita texto livre dentro de **24 h contadas da última mensagem
+do cliente**; fora disso, exige template aprovado pela Meta. A tela mostra
+quanto falta para fechar e desabilita o envio quando fecha, e a server action
+confere de novo antes de mandar — entre carregar a lista e clicar em enviar, a
+janela pode ter fechado.
+
+Enquanto não houver templates aprovados, chamado parado por mais de um dia só
+pode ser retomado por telefone.
 
 Ordena por `recebido_em` desc e traz no máximo 200 linhas. Passando disso, o
 próximo passo é paginação.

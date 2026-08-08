@@ -20,6 +20,21 @@ type ChamadoInsert =
 
 // `type` e não `interface`: o postgrest-js checa o schema contra
 // `Record<string, ...>`, e interface não ganha index signature implícita.
+export type MensagemRow = {
+  id: string;
+  chamado_id: string;
+  direcao: 'entrada' | 'saida';
+  texto: string;
+  enviado_por: string | null;
+  wa_message_id: string | null;
+  erro: string | null;
+  created_at: string;
+};
+
+type MensagemInsert =
+  & Omit<MensagemRow, 'id' | 'created_at'>
+  & Partial<Pick<MensagemRow, 'id' | 'created_at'>>;
+
 export type Database = {
   public: {
     Tables: {
@@ -27,6 +42,12 @@ export type Database = {
         Row: ChamadoRow;
         Insert: ChamadoInsert;
         Update: Partial<ChamadoRow>;
+        Relationships: [];
+      };
+      chamado_mensagens: {
+        Row: MensagemRow;
+        Insert: MensagemInsert;
+        Update: Partial<MensagemRow>;
         Relationships: [];
       };
     };

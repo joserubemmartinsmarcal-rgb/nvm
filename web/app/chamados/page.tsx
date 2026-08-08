@@ -2,10 +2,12 @@ import Link from 'next/link';
 import { redirect } from 'next/navigation';
 import { criarClienteSupabase } from '@/lib/supabase/server';
 import { StatusSelect } from './status-select';
+import { Responder } from './responder';
 import {
   type Chamado,
   formatarData,
   formatarTelefone,
+  horasRestantes,
   isChamadoStatus,
   STATUS,
   STATUS_LABEL,
@@ -16,6 +18,8 @@ import {
 // Chamado novo pode chegar a qualquer momento: nada de cache.
 export const dynamic = 'force-dynamic';
 
+// Precisa ser um literal único: concatenar strings apaga o tipo literal e o
+// supabase-js perde a tipagem das colunas. `payload` fica de fora de propósito.
 const COLUNAS =
   'id, protocolo, canal, telefone, nome_cliente, tipo_servico, descricao, endereco_origem, endereco_destino, latitude, longitude, veiculo, placa, status, recebido_em';
 
@@ -78,8 +82,6 @@ export default async function ChamadosPage({ searchParams }: Props) {
 
   // Os filtros precisam vir antes de `order`/`limit`: depois deles o builder
   // do PostgREST já não aceita `eq`/`or`.
-  // Precisa ser um literal único: concatenar strings apaga o tipo literal e o
-  // supabase-js perde a tipagem das colunas. `payload` fica de fora de propósito.
   let filtro = supabase.from('chamados').select(COLUNAS);
 
   if (statusFiltro !== null) {
@@ -243,7 +245,15 @@ export default async function ChamadosPage({ searchParams }: Props) {
                     )}
                   </td>
                   <td className="px-4 py-3">
-                    <StatusSelect chamadoId={chamado.id} status={chamado.status} />
+                    <div className="flex flex-col items-start gap-2">
+                      <StatusSelect chamadoId={chamado.id} status={chamado.status} />
+                      <Responder
+                        chamadoId={chamado.id}
+                        protocolo={chamado.protocolo}
+                        nomeCliente={chamado.nome_cliente}
+                        horasRestantes={horasRestantes(chamado.recebido_em)}
+                      />
+                    </div>
                   </td>
                 </tr>
               ))}

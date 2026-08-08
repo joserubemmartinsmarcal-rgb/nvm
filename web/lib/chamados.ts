@@ -81,6 +81,28 @@ export function tempoDecorrido(iso: string, agora: number = Date.now()): string 
   return `há ${Math.floor(horas / 24)} d`;
 }
 
+/**
+ * Janela de atendimento do WhatsApp: 24 horas contadas da última mensagem do
+ * cliente. Fora dela a Meta recusa texto livre e só aceita template aprovado.
+ *
+ * Lógica pura de propósito — a tela precisa dela para desabilitar o botão e o
+ * servidor para recusar o envio.
+ */
+export const JANELA_HORAS = 24;
+
+function fimDaJanela(ultimaMensagemDoCliente: string): number {
+  return new Date(ultimaMensagemDoCliente).getTime() + JANELA_HORAS * 3600_000;
+}
+
+export function janelaAberta(ultimaMensagemDoCliente: string, agora: number = Date.now()): boolean {
+  return agora < fimDaJanela(ultimaMensagemDoCliente);
+}
+
+/** Horas que faltam para a janela fechar, arredondadas para cima. 0 = fechada. */
+export function horasRestantes(ultimaMensagemDoCliente: string, agora: number = Date.now()): number {
+  return Math.max(0, Math.ceil((fimDaJanela(ultimaMensagemDoCliente) - agora) / 3600_000));
+}
+
 /** Formata o telefone do WhatsApp (5511988887777) como (11) 98888-7777. */
 export function formatarTelefone(telefone: string): string {
   const nacional = telefone.startsWith('55') ? telefone.slice(2) : telefone;
