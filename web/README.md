@@ -1,20 +1,33 @@
 # Tela de chamados (Next.js App Router)
 
-Lista os chamados que a Edge Function grava na tabela `chamados`, com filtro por
-status, busca e troca de status na própria lista.
+Aplicativo completo e pronto para publicar: login, lista dos chamados que a Edge
+Function grava na tabela `chamados`, filtro por status, busca, troca de status e
+resposta ao cliente pelo WhatsApp.
 
-Estes arquivos foram escritos para serem **copiados para dentro do `meu-tms`**,
-mantendo a estrutura de pastas:
+```bash
+npm install
+cp .env.example .env.local   # preencha
+npm run dev
+```
 
-```
-web/app/chamados/page.tsx          ->  meu-tms/app/chamados/page.tsx
-web/app/chamados/actions.ts        ->  meu-tms/app/chamados/actions.ts
-web/app/chamados/status-select.tsx ->  meu-tms/app/chamados/status-select.tsx
-web/lib/chamados.ts                ->  meu-tms/lib/chamados.ts
-web/lib/supabase/server.ts         ->  meu-tms/lib/supabase/server.ts
-web/lib/supabase/types.ts          ->  meu-tms/lib/supabase/types.ts
-web/middleware.ts                  ->  meu-tms/middleware.ts
-```
+Também dá para copiar as pastas `app/` e `lib/` para dentro de um Next.js que já
+exista (o `meu-tms`), mantendo a estrutura.
+
+## Duas telas, um código
+
+A lista se adapta ao aparelho:
+
+- **Celular** — cartões (`chamado-card.tsx`). A tabela obrigava a rolar de lado
+  e escondia justamente o status e o botão de responder, que é o que a equipe
+  precisa no meio da rua.
+- **Computador** — tabela, que aproveita a largura.
+
+## Login
+
+Usa Supabase Auth com email e senha. Não há tela de cadastro de propósito: os
+usuários são criados por você no painel do Supabase, em
+**Authentication → Users → Add user**. É uma ferramenta interna, não um site
+público — ninguém deve conseguir se cadastrar sozinho.
 
 ## Dependências
 

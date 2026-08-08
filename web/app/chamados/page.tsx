@@ -3,6 +3,9 @@ import { redirect } from 'next/navigation';
 import { criarClienteSupabase } from '@/lib/supabase/server';
 import { StatusSelect } from './status-select';
 import { Responder } from './responder';
+import { ChamadoCard } from './chamado-card';
+import { LinkLocal } from './link-local';
+import { sair } from '../login/actions';
 import {
   type Chamado,
   formatarData,
@@ -50,23 +53,6 @@ function AbaStatus(
       )}
     </Link>
   );
-}
-
-function LinkLocal({ chamado }: { chamado: Chamado }) {
-  const { endereco_origem: origem, latitude, longitude } = chamado;
-  if (latitude !== null && longitude !== null) {
-    return (
-      <a
-        href={`https://www.google.com/maps/search/?api=1&query=${latitude},${longitude}`}
-        target="_blank"
-        rel="noreferrer"
-        className="text-blue-700 underline underline-offset-2"
-      >
-        {origem ?? 'Ver no mapa'}
-      </a>
-    );
-  }
-  return <>{origem ?? <span className="text-slate-400">—</span>}</>;
 }
 
 export default async function ChamadosPage({ searchParams }: Props) {
@@ -126,11 +112,21 @@ export default async function ChamadosPage({ searchParams }: Props) {
 
   return (
     <main className="mx-auto max-w-7xl p-6">
-      <header className="mb-6 flex flex-wrap items-baseline justify-between gap-3">
-        <h1 className="text-2xl font-semibold text-slate-900">Chamados</h1>
-        <p className="text-sm text-slate-500">
-          {porStatus.aberto} aberto(s) · {porStatus.em_atendimento} em atendimento
-        </p>
+      <header className="mb-6 flex flex-wrap items-center justify-between gap-3">
+        <div>
+          <h1 className="text-2xl font-semibold text-slate-900">Chamados</h1>
+          <p className="text-sm text-slate-500">
+            {porStatus.aberto} aberto(s) · {porStatus.em_atendimento} em atendimento
+          </p>
+        </div>
+        <form action={sair}>
+          <button
+            type="submit"
+            className="rounded-lg border border-slate-300 px-3 py-1.5 text-sm text-slate-600 hover:bg-slate-100"
+          >
+            Sair
+          </button>
+        </form>
       </header>
 
       <div className="mb-4 flex flex-wrap items-center gap-2">
@@ -150,7 +146,7 @@ export default async function ChamadosPage({ searchParams }: Props) {
           />
         ))}
 
-        <form className="ml-auto flex gap-2" action="/chamados">
+        <form className="flex w-full gap-2 sm:ml-auto sm:w-auto" action="/chamados">
           {statusFiltro !== null && <input type="hidden" name="status" value={statusFiltro} />}
           <input
             type="search"
@@ -158,7 +154,7 @@ export default async function ChamadosPage({ searchParams }: Props) {
             defaultValue={termo}
             placeholder="Protocolo, nome, telefone ou placa"
             aria-label="Buscar chamados"
-            className="w-64 rounded-lg border border-slate-300 px-3 py-1.5 text-sm"
+            className="w-full rounded-lg border border-slate-300 px-3 py-1.5 text-sm sm:w-64"
           />
           <button
             type="submit"
@@ -183,8 +179,16 @@ export default async function ChamadosPage({ searchParams }: Props) {
         </p>
       )}
 
+      {/* Celular: cartoes. A tabela obriga a rolar de lado e esconde o status. */}
       {chamados.length > 0 && (
-        <div className="overflow-x-auto rounded-lg border border-slate-200">
+        <div className="flex flex-col gap-3 md:hidden">
+          {chamados.map((chamado) => <ChamadoCard key={chamado.id} chamado={chamado} />)}
+        </div>
+      )}
+
+      {/* Computador: tabela, que aproveita a largura. */}
+      {chamados.length > 0 && (
+        <div className="hidden overflow-x-auto rounded-lg border border-slate-200 md:block">
           <table className="w-full min-w-[64rem] border-collapse bg-white text-sm">
             <thead className="bg-slate-50 text-left text-slate-600">
               <tr>
