@@ -18,8 +18,6 @@ type ChamadoInsert =
   & Omit<ChamadoRow, 'id' | 'protocolo' | 'status' | 'created_at' | 'updated_at' | 'canal'>
   & Partial<Pick<ChamadoRow, 'id' | 'protocolo' | 'status' | 'canal'>>;
 
-// `type` e não `interface`: o postgrest-js checa o schema contra
-// `Record<string, ...>`, e interface não ganha index signature implícita.
 export type MensagemRow = {
   id: string;
   chamado_id: string;
@@ -35,6 +33,8 @@ type MensagemInsert =
   & Omit<MensagemRow, 'id' | 'created_at'>
   & Partial<Pick<MensagemRow, 'id' | 'created_at'>>;
 
+// `type` e não `interface`: o postgrest-js checa o schema contra
+// `Record<string, ...>`, e interface não ganha index signature implícita.
 export type Database = {
   public: {
     Tables: {
