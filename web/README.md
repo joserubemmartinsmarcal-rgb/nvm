@@ -24,18 +24,19 @@ A lista se adapta ao aparelho:
 
 ## Acesso
 
-**Não há tela de login.** O acesso é controlado por uma **senha única do site**,
-configurada na Vercel em *Settings → Deployment Protection → Password
-Protection*. Uma senha só, compartilhada com a equipe, sem cadastrar ninguém.
+**Não há login nem senha.** Quem tiver o link do site vê os chamados —
+inclusive nome, telefone e endereço dos clientes. A proteção real está em
+**não divulgar o link**: mande só para quem precisa usar.
 
-Por isso a leitura do banco passou a ser feita no servidor com a chave
-`service_role`: a RLS continua barrando qualquer acesso direto ao banco, e os
-dados dos clientes só saem para quem passou pela senha do site.
+A leitura do banco é feita no servidor com a chave `service_role`; a RLS
+continua barrando qualquer acesso direto ao banco de fora do servidor.
 
-A troca foi deliberada. O login por usuário exigia cadastrar cada pessoa no
-painel do Supabase, e isso travou a operação na prática — para uma equipe
-pequena, uma senha compartilhada entrega a mesma proteção com um custo de
-operação muito menor.
+Duas tentativas de controle de acesso (login por usuário via Supabase Auth,
+depois uma senha única do site) travaram na prática e foram removidas — a
+prioridade passou a ser o sistema funcionar. Se o acesso por link aberto virar
+um problema real, uma opção mais simples é a proteção por senha da própria
+Vercel (Settings → Deployment Protection → Password Protection), que exige
+plano pago mas não depende de código nenhum aqui.
 
 ## O que a tela faz
 
