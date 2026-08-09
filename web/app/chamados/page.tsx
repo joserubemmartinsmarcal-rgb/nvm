@@ -89,6 +89,12 @@ export default async function ChamadosPage({ searchParams }: Props) {
     ),
   ]);
 
+  if (error !== null) {
+    // Sem isso, a tela mostra só a mensagem genérica e o motivo real fica
+    // invisível até para quem tem acesso ao servidor.
+    console.error('falha ao carregar chamados:', error.message, error);
+  }
+
   const porStatus = Object.fromEntries(contagens);
   const chamados: Chamado[] = data ?? [];
 
