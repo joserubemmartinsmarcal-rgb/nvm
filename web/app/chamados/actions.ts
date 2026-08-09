@@ -23,10 +23,6 @@ export async function atualizarStatus(id: string, status: string): Promise<Resul
   }
 
   const supabase = await criarClienteSupabase();
-  const { data: { user } } = await supabase.auth.getUser();
-  if (user === null) {
-    return { erro: 'Sessão expirada. Entre novamente.' };
-  }
 
   const { error } = await supabase
     .from('chamados')
@@ -58,10 +54,6 @@ export async function responderChamado(chamadoId: string, texto: string): Promis
   }
 
   const supabase = await criarClienteSupabase();
-  const { data: { user } } = await supabase.auth.getUser();
-  if (user === null) {
-    return { erro: 'Sessão expirada. Entre novamente.' };
-  }
 
   const { data: chamado, error: erroBusca } = await supabase
     .from('chamados')
@@ -87,7 +79,6 @@ export async function responderChamado(chamadoId: string, texto: string): Promis
     chamado_id: chamado.id,
     direcao: 'saida',
     texto: mensagem,
-    enviado_por: user.id,
     wa_message_id: waMessageId,
     erro,
   });

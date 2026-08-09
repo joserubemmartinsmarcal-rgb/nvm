@@ -1,35 +1,29 @@
-import { createServerClient, type CookieOptions } from '@supabase/ssr';
-import { cookies } from 'next/headers';
+import 'server-only';
+import { createClient } from '@supabase/supabase-js';
 import type { Database } from './types';
 
 /**
- * Cliente Supabase para Server Components e Server Actions.
+ * Cliente Supabase do servidor, com a service role.
  *
- * Usa a chave anônima e a sessão do usuário logado — a RLS da tabela `chamados`
- * é que autoriza a leitura. A service role não entra aqui: ela ignora RLS e só
- * deve viver na Edge Function, nunca no app.
+ * Não há mais login de usuário no app: quem controla o acesso é a senha do
+ * site, na frente. Por isso a leitura passa a ser feita pelo servidor com a
+ * service role, e a RLS continua barrando qualquer acesso direto ao banco —
+ * a chave anônima sozinha não enxerga nada.
+ *
+ * Este módulo é `server-only`: se algum dia for importado por um componente de
+ * cliente, a build quebra em vez de vazar a chave para o navegador.
  */
 export async function criarClienteSupabase() {
-  const cookieStore = await cookies();
+  const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const chave = process.env.SUPABASE_SERVICE_ROLE_KEY;
 
-  return createServerClient<Database>(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
-    {
-      cookies: {
-        getAll() {
-          return cookieStore.getAll();
-        },
-        setAll(cookiesToSet: { name: string; value: string; options: CookieOptions }[]) {
-          try {
-            for (const { name, value, options } of cookiesToSet) {
-              cookieStore.set(name, value, options);
-            }
-          } catch {
-            // Server Component não pode escrever cookie; o middleware renova a sessão.
-          }
-        },
-      },
-    },
-  );
+  if (!url || !chave) {
+    throw new Error(
+      'Faltam NEXT_PUBLIC_SUPABASE_URL e/ou SUPABASE_SERVICE_ROLE_KEY no servidor.',
+    );
+  }
+
+  return createClient<Database>(url, chave, {
+    auth: { persistSession: false, autoRefreshToken: false },
+  });
 }

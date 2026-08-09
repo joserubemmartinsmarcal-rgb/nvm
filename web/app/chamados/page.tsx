@@ -1,11 +1,9 @@
 import Link from 'next/link';
-import { redirect } from 'next/navigation';
 import { criarClienteSupabase } from '@/lib/supabase/server';
 import { StatusSelect } from './status-select';
 import { Responder } from './responder';
 import { ChamadoCard } from './chamado-card';
 import { LinkLocal } from './link-local';
-import { sair } from '../login/actions';
 import {
   type Chamado,
   formatarData,
@@ -61,10 +59,6 @@ export default async function ChamadosPage({ searchParams }: Props) {
   const termo = busca?.trim() ?? '';
 
   const supabase = await criarClienteSupabase();
-  const { data: { user } } = await supabase.auth.getUser();
-  if (user === null) {
-    redirect('/login');
-  }
 
   // Os filtros precisam vir antes de `order`/`limit`: depois deles o builder
   // do PostgREST já não aceita `eq`/`or`.
@@ -112,21 +106,13 @@ export default async function ChamadosPage({ searchParams }: Props) {
 
   return (
     <main className="mx-auto max-w-7xl p-6">
-      <header className="mb-6 flex flex-wrap items-center justify-between gap-3">
+      <header className="mb-6">
         <div>
           <h1 className="text-2xl font-semibold text-slate-900">Chamados</h1>
           <p className="text-sm text-slate-500">
             {porStatus.aberto} aberto(s) · {porStatus.em_atendimento} em atendimento
           </p>
         </div>
-        <form action={sair}>
-          <button
-            type="submit"
-            className="rounded-lg border border-slate-300 px-3 py-1.5 text-sm text-slate-600 hover:bg-slate-100"
-          >
-            Sair
-          </button>
-        </form>
       </header>
 
       <div className="mb-4 flex flex-wrap items-center gap-2">

@@ -1,8 +1,8 @@
 # Tela de chamados (Next.js App Router)
 
-Aplicativo completo e pronto para publicar: login, lista dos chamados que a Edge
-Function grava na tabela `chamados`, filtro por status, busca, troca de status e
-resposta ao cliente pelo WhatsApp.
+Aplicativo completo e publicado: lista dos chamados que a Edge Function grava na
+tabela `chamados`, filtro por status, busca, troca de status e resposta ao
+cliente pelo WhatsApp.
 
 ```bash
 npm install
@@ -22,62 +22,20 @@ A lista se adapta ao aparelho:
   precisa no meio da rua.
 - **Computador** — tabela, que aproveita a largura.
 
-## Login
+## Acesso
 
-Usa Supabase Auth com email e senha. Não há tela de cadastro de propósito: os
-usuários são criados por você no painel do Supabase, em
-**Authentication → Users → Add user**. É uma ferramenta interna, não um site
-público — ninguém deve conseguir se cadastrar sozinho.
+**Não há tela de login.** O acesso é controlado por uma **senha única do site**,
+configurada na Vercel em *Settings → Deployment Protection → Password
+Protection*. Uma senha só, compartilhada com a equipe, sem cadastrar ninguém.
 
-## Dependências
+Por isso a leitura do banco passou a ser feita no servidor com a chave
+`service_role`: a RLS continua barrando qualquer acesso direto ao banco, e os
+dados dos clientes só saem para quem passou pela senha do site.
 
-```bash
-npm install @supabase/supabase-js '@supabase/ssr@>=0.12' server-only
-```
-
-> **Não use `@supabase/ssr` 0.5.x.** A assinatura genérica daquela versão não
-> bate com o `supabase-js` 2.x atual e o `.update()` da tabela degrada para
-> `never`, quebrando a build com um erro de tipo difícil de ler. Validado na
-> 0.12.4.
-
-Requer **Next.js 15** (o `searchParams` da página é um `Promise`, como na 15).
-Estilo em Tailwind, que o `create-next-app` já configura.
-
-## Variáveis de ambiente
-
-No `.env.local` do `meu-tms`:
-
-```
-NEXT_PUBLIC_SUPABASE_URL=https://<project-ref>.supabase.co
-NEXT_PUBLIC_SUPABASE_ANON_KEY=<anon key>
-```
-
-Para responder o cliente pelo TMS, também:
-
-```
-WHATSAPP_PHONE_NUMBER_ID=<id do número na WABA>
-WHATSAPP_TOKEN=<token de acesso permanente>
-WHATSAPP_API_VERSION=v21.0
-```
-
-Essas três **não** levam `NEXT_PUBLIC_`: são segredos de servidor. O
-`lib/whatsapp.ts` importa `server-only`, então a build quebra se alguém tentar
-usá-lo em componente de cliente.
-
-A chave **anônima**, não a service role. A leitura é autorizada pela RLS da
-tabela: a policy libera `select` para `authenticated`, então o app só enxerga os
-chamados com um usuário logado. A service role ignora RLS e deve ficar só na
-Edge Function.
-
-## Autenticação
-
-O código assume **Supabase Auth**: `page.tsx` chama `supabase.auth.getUser()` e
-redireciona para `/login` quando não há sessão, e o `middleware.ts` renova o
-token a cada request.
-
-Se o TMS for usar **NextAuth** em vez disso, dois pontos mudam: a autorização
-deixa de vir da RLS (passaria a ser service role + checagem no app), e o
-`middleware.ts` fica desnecessário. Vale decidir isso antes de crescer a tela.
+A troca foi deliberada. O login por usuário exigia cadastrar cada pessoa no
+painel do Supabase, e isso travou a operação na prática — para uma equipe
+pequena, uma senha compartilhada entrega a mesma proteção com um custo de
+operação muito menor.
 
 ## O que a tela faz
 
@@ -112,6 +70,8 @@ próximo passo é paginação.
 
 - `export const dynamic = 'force-dynamic'` — chamado novo pode chegar a qualquer
   momento; com cache a lista aparece velha.
+- Alterar variável de ambiente na Vercel exige **republicar**; só salvar não
+  basta.
 - Os filtros (`eq`, `or`) precisam vir **antes** de `order`/`limit`: depois deles
   o builder do PostgREST já não expõe esses métodos.
 - A lista de colunas do `select` é um **literal único**. Concatenar strings apaga
@@ -125,5 +85,5 @@ próximo passo é paginação.
 ## Verificação
 
 `tsc --noEmit` e `next build` passam em um projeto Next.js 15.5 real, com
-`@supabase/ssr` 0.12.4 e `supabase-js` 2.112.2. A rota sai como dinâmica (`ƒ`),
-que é o esperado.
+`supabase-js` 2.112.2. A rota `/chamados` sai como dinâmica (`ƒ`), que é o
+esperado, e não existem mais rotas de login nem middleware.

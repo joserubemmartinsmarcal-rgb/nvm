@@ -29,9 +29,13 @@ export type MensagemRow = {
   created_at: string;
 };
 
+/**
+ * `enviado_por` é opcional: sem login no app, não há usuário a registrar.
+ * A coluna aceita nulo justamente para as mensagens automáticas.
+ */
 type MensagemInsert =
-  & Omit<MensagemRow, 'id' | 'created_at'>
-  & Partial<Pick<MensagemRow, 'id' | 'created_at'>>;
+  & Omit<MensagemRow, 'id' | 'created_at' | 'enviado_por'>
+  & Partial<Pick<MensagemRow, 'id' | 'created_at' | 'enviado_por'>>;
 
 // `type` e não `interface`: o postgrest-js checa o schema contra
 // `Record<string, ...>`, e interface não ganha index signature implícita.
