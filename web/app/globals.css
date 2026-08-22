@@ -1,0 +1,7 @@
+@import 'tailwindcss';
+
+/* Fundo claro fixo: a tela é usada no sol, dentro do guincho. */
+body {
+  background-color: #f8fafc;
+  color: #0f172a;
+}
