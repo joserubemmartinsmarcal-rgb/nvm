@@ -3,35 +3,35 @@
 body{background:#222;padding:20px;display:flex;flex-direction:column;gap:20px;font-family:Inter,sans-serif;color:#fff}
 .art{position:relative;overflow:hidden;background:radial-gradient(120% 80% at 85% 0%,#14315a 0%,#0a1524 55%);padding:90px 84px}
 .feed{width:1080px;height:1350px}.story{width:1080px;height:1920px;padding:200px 84px 260px}.sq{width:1080px;height:1080px}
-.kick{font:600 26px "JetBrains Mono";letter-spacing:.14em;color:#3b9cff;text-transform:uppercase}
+.kick{font:600 26px "JetBrains Mono";letter-spacing:.14em;color:#2a86ff;text-transform:uppercase}
 .count{position:absolute;top:90px;right:84px;font:600 26px "JetBrains Mono";color:#6f86a3}
 .story .count{top:200px}
 h1{font:900 128px/0.98 "Inter Display";letter-spacing:-.035em;margin-top:40px}
 h1.m{font-size:104px}h1.s{font-size:84px}
-.blue{color:#3b9cff}.gold{color:#e0a84a}
+.blue{color:#2a86ff}.gold{color:#e0a84a}
 .p{font:500 44px/1.35 Inter;color:#c9d6e6;margin-top:36px;max-width:880px}
 .p b{color:#fff;font-weight:800}
 .q{font:800 64px/1.1 "Inter Display";letter-spacing:-.02em;margin-top:56px}
 .a{font:500 42px/1.4 Inter;color:#c9d6e6;margin-top:22px;max-width:900px}
 .list{margin-top:48px;display:flex;flex-direction:column;gap:26px}
 .li{display:flex;gap:26px;align-items:flex-start;font:600 46px/1.25 Inter}
-.li i{flex:none;width:58px;height:58px;border-radius:16px;background:#3b9cff;color:#0a1524;font:900 32px/58px "Inter Display";text-align:center;font-style:normal}
+.li i{flex:none;width:58px;height:58px;border-radius:16px;background:#2a86ff;color:#0a1524;font:900 32px/58px "Inter Display";text-align:center;font-style:normal}
 .road{position:absolute;left:0;right:0;bottom:190px;height:10px;background:repeating-linear-gradient(90deg,#e0a84a 0 90px,transparent 90px 150px);opacity:.85}
 .story .road{bottom:260px}
 .foot{position:absolute;left:84px;right:84px;bottom:70px;display:flex;justify-content:space-between;align-items:center}
 .story .foot{bottom:120px}
 .logo{display:flex;align-items:center;gap:20px}
-.logo b{width:84px;height:84px;border-radius:22px;background:#3b9cff;color:#fff;font:900 42px/84px "Inter Display";text-align:center;letter-spacing:-.04em}
+.logo img{height:72px;filter:drop-shadow(0 0 18px #1f7bff66)}
 .logo span{font:700 30px/1.15 Inter}.logo small{display:block;font:500 22px "JetBrains Mono";color:#8ea3bd;letter-spacing:.06em}
 .url{font:600 30px "JetBrains Mono";color:#fff;background:#13284a;border:2px solid #24477a;border-radius:16px;padding:16px 22px}
-.big{font:900 360px/0.85 "Inter Display";letter-spacing:-.06em;color:#3b9cff;margin-top:70px}
-.pill{display:inline-block;margin-top:40px;font:700 34px Inter;background:#3b9cff;color:#fff;border-radius:999px;padding:20px 36px}
+.big{font:900 360px/0.85 "Inter Display";letter-spacing:-.06em;color:#2a86ff;margin-top:70px}
+.pill{display:inline-block;margin-top:40px;font:700 34px Inter;background:#2a86ff;color:#fff;border-radius:999px;padding:20px 36px}
 .card{margin-top:44px;background:#0f2340;border:2px solid #24477a;border-radius:28px;padding:36px 40px}
 .card .t{font:600 26px "JetBrains Mono";color:#8ea3bd;letter-spacing:.08em;text-transform:uppercase}
 .card .r{font:800 58px/1.1 "Inter Display";margin-top:10px}
-.swipe{position:absolute;right:84px;bottom:210px;font:700 34px Inter;color:#3b9cff}
+.swipe{position:absolute;right:84px;bottom:210px;font:700 34px Inter;color:#2a86ff}
 .badge{width:760px;height:760px;border-radius:50%;margin:70px auto 0;border:14px solid #e0a84a;display:flex;flex-direction:column;align-items:center;justify-content:center;background:radial-gradient(circle,#14315a,#0a1524);box-shadow:0 0 0 22px #0a1524,0 0 0 26px #e0a84a55}
-.badge .g{width:200px;height:200px;border-radius:52px;background:#3b9cff;font:900 104px/200px "Inter Display";text-align:center;letter-spacing:-.05em}
+.badge .g{width:440px;filter:drop-shadow(0 0 30px #1f7bff88)}
 .badge .f{font:900 92px "Inter Display";letter-spacing:.04em;margin-top:36px;color:#e0a84a}
 .badge .d{font:600 30px "JetBrains Mono";color:#c9d6e6;letter-spacing:.14em;margin-top:8px}
 .sq{padding:0;display:flex;align-items:center;justify-content:center}
@@ -39,7 +39,7 @@ h1.m{font-size:104px}h1.s{font-size:84px}
 </style></head><body>
 
 <!-- LOGO / FOOT template -->
-<template id="foot"><div class="road"></div><div class="foot"><div class="logo"><b>GF</b><span>Guincho Fácil<small>CONEXÕES QUE MOVEM</small></span></div><div class="url">appdoguincheiro.com</div></div></template>
+<template id="foot"><div class="road"></div><div class="foot"><div class="logo"><img src="logo-gf.png" alt="GF"><span>Guincho Fácil<small>CONEXÕES QUE MOVEM</small></span></div><div class="url">appdoguincheiro.com</div></div></template>
 
 <!-- 11/11 Fundadores feed -->
 <div class="art feed" id="11-11_fundadores-feed"><div class="kick">Fundadores GF</div>
@@ -55,7 +55,7 @@ h1.m{font-size:104px}h1.s{font-size:84px}
 <div class="card"><div class="t">Vagas de Fundador</div><div class="r">até 22/11</div></div>
 
 <!-- Selo -->
-<div class="art sq" id="selo-fundador"><div class="badge"><div class="g">GF</div><div class="f">FUNDADOR</div><div class="d">DESDE 2026</div></div></div>
+<div class="art sq" id="selo-fundador"><div class="badge"><img class="g" src="logo-gf.png" alt="GF"><div class="f">FUNDADOR</div><div class="d">DESDE 2026</div></div></div>
 
 <!-- 16/11 Faltam 7 dias -->
 <div class="art feed" id="16-11_faltam-7-dias"><div class="kick">Lançamento · seg 23/11</div>
@@ -82,7 +82,7 @@ h1.m{font-size:104px}h1.s{font-size:84px}
 
 <!-- 23/11 Lançamento -->
 <div class="art feed" id="23-11_lancamento-1"><div class="kick">23/11 · Lançamento</div><div class="count">1/4</div>
-<h1 style="font-size:190px;margin-top:120px">Chegou o <span class="blue">GF.</span></h1><div class="p" style="font-size:54px;color:#fff;font-weight:700">Ida com chamado.<br><span class="gold">Volta com frete.</span></div><div class="swipe">Arrasta →</div><div data-foot></div></div>
+<h1 style="font-size:170px;margin-top:90px">Chegou o</h1><img src="logo-gf.png" alt="GF" style="width:640px;margin-top:30px;filter:drop-shadow(0 0 40px #1f7bffaa)"><div class="p" style="font-size:54px;color:#fff;font-weight:700">Ida com chamado.<br><span class="gold">Volta com frete.</span></div><div class="swipe">Arrasta →</div><div data-foot></div></div>
 <div class="art feed" id="23-11_lancamento-2"><div class="kick">Como funciona</div><div class="count">2/4</div>
 <div class="big" style="font-size:300px">1</div><h1 class="m">Anuncie seu <span class="blue">retorno.</span></h1><div class="p">De onde sai, para onde volta, quando e com que equipamento.</div><div data-foot></div></div>
 <div class="art feed" id="23-11_lancamento-3"><div class="kick">Como funciona</div><div class="count">3/4</div>
