@@ -1,0 +1,54 @@
+
+*{box-sizing:border-box;margin:0}
+body{background:#222;padding:20px;display:flex;flex-direction:column;gap:20px;font-family:Inter,sans-serif;color:#fff}
+.art{position:relative;overflow:hidden;background:radial-gradient(120% 80% at 85% 0%,#14315a 0%,#0a1524 55%);padding:90px 84px}
+.feed{width:1080px;height:1350px}.story{width:1080px;height:1920px;padding:200px 84px 260px}.sq{width:1080px;height:1080px}
+.kick{font:600 26px "JetBrains Mono";letter-spacing:.14em;color:#2a86ff;text-transform:uppercase}
+.count{position:absolute;top:90px;right:84px;font:600 26px "JetBrains Mono";color:#6f86a3}
+.story .count{top:200px}
+h1{font:900 128px/0.98 "Inter Display";letter-spacing:-.035em;margin-top:40px}
+h1.m{font-size:104px}h1.s{font-size:84px}
+.blue{color:#2a86ff}.gold{color:#2a86ff}
+.p{font:500 44px/1.35 Inter;color:#c9d6e6;margin-top:36px;max-width:880px}
+.p b{color:#fff;font-weight:800}
+.q{font:800 64px/1.1 "Inter Display";letter-spacing:-.02em;margin-top:56px}
+.a{font:500 42px/1.4 Inter;color:#c9d6e6;margin-top:22px;max-width:900px}
+.list{margin-top:48px;display:flex;flex-direction:column;gap:26px}
+.li{display:flex;gap:26px;align-items:flex-start;font:600 46px/1.25 Inter}
+.li i{flex:none;width:58px;height:58px;border-radius:16px;background:#2a86ff;color:#0a1524;font:900 32px/58px "Inter Display";text-align:center;font-style:normal}
+.road{position:absolute;left:0;right:0;bottom:190px;height:10px;background:repeating-linear-gradient(90deg,#dfe6ef 0 90px,transparent 90px 150px);opacity:.55}
+.story .road{bottom:260px}
+.foot{position:absolute;left:84px;right:84px;bottom:70px;display:flex;justify-content:space-between;align-items:center}
+.story .foot{bottom:120px}
+.logo{display:flex;align-items:center;gap:20px}
+.logo img{height:72px;filter:drop-shadow(0 0 18px #1f7bff66)}
+.logo span{font:700 30px/1.15 Inter}.logo small{display:block;font:500 22px "JetBrains Mono";color:#8ea3bd;letter-spacing:.06em}
+.url{font:600 30px "JetBrains Mono";color:#fff;background:#13284a;border:2px solid #24477a;border-radius:16px;padding:16px 22px}
+.big{font:900 360px/0.85 "Inter Display";letter-spacing:-.06em;color:#2a86ff;margin-top:70px}
+.pill{display:inline-block;margin-top:40px;font:700 34px Inter;background:#2a86ff;color:#fff;border-radius:999px;padding:20px 36px}
+.card{margin-top:44px;background:#0f2340;border:2px solid #24477a;border-radius:28px;padding:36px 40px}
+.card .t{font:600 26px "JetBrains Mono";color:#8ea3bd;letter-spacing:.08em;text-transform:uppercase}
+.card .r{font:800 58px/1.1 "Inter Display";margin-top:10px}
+.swipe{position:absolute;right:84px;bottom:210px;font:700 34px Inter;color:#2a86ff}
+.badge{width:760px;height:760px;border-radius:50%;margin:70px auto 0;border:14px solid #c9d3df;display:flex;flex-direction:column;align-items:center;justify-content:center;background:radial-gradient(circle,#14315a,#0a1524);box-shadow:0 0 0 22px #0a1524,0 0 0 26px #2a86ff66}
+.badge .g{width:440px;filter:drop-shadow(0 0 30px #1f7bff88)}
+.badge .f{font:900 92px "Inter Display";letter-spacing:.04em;margin-top:36px;color:#fff}
+.badge .d{font:600 30px "JetBrains Mono";color:#c9d6e6;letter-spacing:.14em;margin-top:8px}
+.sq{padding:0;display:flex;align-items:center;justify-content:center}
+.sq .badge{margin:0}
+
+.ph{outline:3px dashed #ff5fa2;outline-offset:4px;border-radius:6px;color:#ffd1e4}
+.phone{position:absolute;right:84px;bottom:240px;width:400px;height:760px;border-radius:56px;border:10px solid #c9d3df;background:#0f2340;display:flex;align-items:center;justify-content:center;text-align:center;padding:40px;box-shadow:0 0 60px #2a86ff44}
+.phone span{font:600 30px/1.35 Inter;color:#ffd1e4;outline:3px dashed #ff5fa2;outline-offset:14px;border-radius:8px}
+.stepn{font:900 200px/0.9 "Inter Display";color:#2a86ff;letter-spacing:-.05em;margin-top:60px}
+.half{max-width:520px}
+.calc{margin-top:40px;display:flex;flex-direction:column;gap:18px}
+.calc .row{display:flex;justify-content:space-between;align-items:baseline;background:#0f2340;border:2px solid #24477a;border-radius:22px;padding:26px 34px;font:600 40px Inter}
+.calc .row b{font:900 60px "Inter Display"}
+.tagex{position:absolute;top:90px;right:84px;font:700 24px "JetBrains Mono";color:#ffd1e4;outline:3px dashed #ff5fa2;padding:6px 12px;border-radius:6px}
+.disc{font:500 28px/1.4 Inter;color:#8ea3bd;margin-top:30px;max-width:900px}
+.route{margin-top:50px;background:#0f2340;border:2px solid #24477a;border-radius:32px;padding:44px}
+.route .c{font:900 76px/1.05 "Inter Display";letter-spacing:-.02em}
+.route .c i{font-style:normal;color:#2a86ff}
+.route .m{font:600 34px "JetBrains Mono";color:#c9d6e6;margin-top:20px}
+svg.map{display:block;margin-top:30px}
