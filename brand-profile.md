@@ -2,7 +2,7 @@
 <!-- versão: 0.4 · atualizado: 31/10/2026 · fontes: appdoguincheiro.com (lido em 31/10/2026) + plano "Aquecimento de lançamento: 4 semanas" (Aquecimento_GF.pdf)
      · revisar: a cada trimestre ou quando mudar oferta (ex.: fim da fase grátis)
      · tipo: marketplace regional de duas pontas (cliente que precisa transportar veículo ↔ guincheiro)
-     · MARCA SEPARADA da JM Transportes e Auto Socorro / DIA E NOITE (perfil próprio). No aquecimento a JM entra só como apoio: motoristas da JM, collab com @jmtransportes.me [A CONFIRMAR o limite]
+     · MARCA SEPARADA da JM Transportes e Auto Socorro / DIA E NOITE (perfil próprio). No aquecimento a JM entra só como apoio: motoristas da JM, collab com @jmtransportes.me (confirmado em 31/10)
      · itens [A CONFIRMAR] são palpites — não publicar números/afirmações marcados assim -->
 
 ## Identidade
