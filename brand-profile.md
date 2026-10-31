@@ -1,17 +1,18 @@
-# Perfil de Marca — Guincho Fácil (operado pela JM Transportes e Auto Socorro / DIA E NOITE)
+# Perfil de Marca — Guincho Fácil (GF)
 <!-- versão: 0.1 (rascunho) · atualizado: 31/10/2026 · revisar: a cada trimestre ou quando mudar oferta/marca
      · tipo: local + app de duas pontas (motorista ↔ guincheiro parceiro)
+     · MARCA SEPARADA da JM Transportes e Auto Socorro / DIA E NOITE — não misturar voz, perfis nem provas
      · itens marcados [A CONFIRMAR] são palpites — não publicar números/afirmações marcados assim -->
 
 ## Identidade
-- **O que é (uma frase):** Guincho Fácil é o app para chamar guincho e socorro na hora, pelo celular, com pagamento por Pix ou cartão — feito por quem trabalha com guincho na Fronteira Oeste do RS.
+- **O que é (uma frase):** Guincho Fácil é o app para chamar guincho e socorro na hora, pelo celular, com pagamento por Pix ou cartão, atendido por uma rede de guincheiros parceiros.
 - **Categoria:** guincho e autossocorro sob demanda (app) + rede de guincheiros parceiros.
-- **Quem está por trás:** JM Transportes e Auto Socorro e DIA E NOITE (operação única) — sede em Alegrete, filiais em São Gabriel e Bagé (RS).
-- **Marca principal nas redes:** Guincho Fácil. A JM / DIA E NOITE aparece como a operação experiente por trás do app (credibilidade), não como perfil concorrente. [A CONFIRMAR]
+- **Separação de marcas:** GF e JM / DIA E NOITE são marcas separadas. O GF não usa o nome, a frota, as filiais nem os números da JM como prova, e a JM terá perfil próprio.
+- **Área de atuação inicial:** Fronteira Oeste e Campanha do RS [A CONFIRMAR]
 
 ## Posicionamento
-- **O que é diferente:** não é um app de tecnologia sem caminhão — é de uma empresa de guincho de verdade, com frota e base em três cidades da região. Você chama pelo app e quem chega conhece a estrada.
-- **Por que acreditar:** anos de operação atendendo seguradoras e assistências 24h [A CONFIRMAR: quantos anos], frota própria, três filiais.
+- **O que é diferente:** guincho pelo app com preço na hora, acompanhamento em tempo real e pagamento por Pix ou cartão, com guincheiros locais que conhecem a região. [A CONFIRMAR diferencial principal]
+- **Por que acreditar:** [A CONFIRMAR] número de guincheiros na rede, atendimentos feitos pelo app, avaliações.
 - **Ponto de vista (o que defendemos):**
   1. Quem está parado na estrada precisa de resposta, não de promessa — informar preço e acompanhamento é obrigação.
   2. Guincheiro bom merece receber em dia. Pagamento garantido e repasse rápido valorizam o profissional. [A CONFIRMAR benefícios]
@@ -43,7 +44,7 @@
   - direto e claro, nunca enrolado ou cheio de letra miúda
   - calmo na hora do aperto, nunca dramático com acidente
   - gaúcho na medida, nunca caricato
-- **Palavras que usamos:** "chamar o guincho", "socorro", "na estrada", "a gente vai até você", "preço na hora", "acompanha pelo app", "parceiro" (para guincheiro), "dia e noite", nomes das cidades e rodovias.
+- **Palavras que usamos:** "chamar o guincho", "socorro", "na estrada", "a gente vai até você", "preço na hora", "acompanha pelo app", "parceiro" (para guincheiro), nomes das cidades e rodovias.
 - **Palavras proibidas:** "solução inovadora", "disruptivo", "o melhor do mercado", "garantido em X minutos", "imperdível", "revolucionário", clichês de IA ("no mundo de hoje", "não é só X, é Y").
 - **Situações difíceis:** atraso ou reclamação → reconhecer, responder no privado, resolver; nunca discutir em comentário. Preço → explicar o que está incluso, sem esconder.
 - **Recursos de assinatura:** frases curtas; começar pelo problema real ("Pneu furou na BR-290 às 23h?"); emoji com moderação (🚛 📍 ✅ no máximo 2 por post); 3–5 hashtags locais (#Alegrete #SãoGabriel #Bagé #FronteiraOeste #GuinchoFácil); CTA sempre clara no fim.
@@ -51,10 +52,10 @@
 - **Pronúncia:** "Guincho Fácil" (guín-cho fá-sil); "Alegrete" (a-le-grê-te); "Bagé" (ba-gé).
 
 ## Provas
-- **Números:** [A CONFIRMAR] anos de operação, atendimentos/mês, tempo médio de chegada, tamanho da frota, guincheiros cadastrados no app.
-- **Clientes nomeados:** atende seguradoras e assistências 24h — **não citar nomes sem autorização por escrito.**
+- **Números:** [A CONFIRMAR] atendimentos pelo app, tempo médio de chegada, guincheiros cadastrados, cidades atendidas. Nunca usar números da JM.
+- **Clientes nomeados:** **não citar nomes de seguradoras ou empresas sem autorização por escrito.**
 - **Resultados de caso:** [A CONFIRMAR] histórias reais de atendimento (com consentimento do cliente).
-- **Credenciais:** três filiais (Alegrete, São Gabriel, Bagé); operação 24h (DIA E NOITE).
+- **Credenciais:** [A CONFIRMAR] atendimento 24h pelo app.
 - **Prova social:** [A CONFIRMAR] avaliações no Google / loja de apps.
 - **Direitos de uso:** só publicar depoimento, rosto ou carro de cliente com autorização; repost orgânico e anúncio pago são permissões diferentes — registrar qual foi dada.
 
@@ -65,15 +66,15 @@
 - **Regras de venda:** 1 post de venda direta a cada 3–4 de utilidade (dicas, bastidores, rotina); nunca usar acidente grave como gancho de venda.
 
 ## Canais
-- **Ativos:** Instagram **@guinchofacil.app** [A CONFIRMAR: Facebook, TikTok, perfil da JM]
+- **Ativos:** Instagram **@guinchofacil.app** [A CONFIRMAR: Facebook, TikTok]
 - **Frequência:** [A CONFIRMAR] — sugestão inicial: 3 posts/semana + stories diários.
 - **Links:** guinchofacil.app.br · centraldoguincho.store
 - **Idioma / mercado:** português do Brasil, linguagem do RS; foco em Fronteira Oeste e Campanha.
 
 ## Padrões operacionais
-- **IA e mídia sintética:** imagens/vídeos gerados por IA só para ilustração e identificados como tal; nunca simular acidente real, cliente real ou guincheiro real; sem clone de voz de terceiros (só voz própria, com consentimento). Preferir sempre foto/vídeo real da frota. [A CONFIRMAR]
+- **IA e mídia sintética:** imagens/vídeos gerados por IA só para ilustração e identificados como tal; nunca simular acidente real, cliente real ou guincheiro real; sem clone de voz de terceiros (só voz própria, com consentimento). Preferir sempre foto/vídeo real dos guincheiros parceiros (com autorização). [A CONFIRMAR]
 - **Acessibilidade:** legenda sempre ligada em vídeo (muita gente assiste sem som); texto alternativo em toda imagem; contraste alto (navy + branco/dourado).
-- **Identidade visual:** azul-marinho `#0F3460` + dourado `#D4A24C`, base branca, tipografia forte; evitar amarelo vivo e fundo todo preto. Detalhes de logo/fonte → `design-and-templates`.
+- **Identidade visual:** [A CONFIRMAR se o GF usa as mesmas cores da JM] azul-marinho `#0F3460` + dourado `#D4A24C`, base branca, tipografia forte; evitar amarelo vivo e fundo todo preto. Detalhes de logo/fonte → `design-and-templates`.
 
 ## Limites
 - **Proibido:** expor placa, rosto ou dados de cliente sem autorização (LGPD); fotos de acidente com vítimas; piada com acidente; prometer tempo de chegada sem dado real.
