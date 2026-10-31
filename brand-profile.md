@@ -1,91 +1,94 @@
-# Perfil de Marca — Guincho Fácil (GF)
-<!-- versão: 0.1 (rascunho) · atualizado: 31/10/2026 · revisar: a cada trimestre ou quando mudar oferta/marca
-     · tipo: local + app de duas pontas (motorista ↔ guincheiro parceiro)
+# Perfil de Marca — GF · Guincho Fácil
+<!-- versão: 0.3 · atualizado: 31/10/2026 · fonte principal: appdoguincheiro.com (lido em 31/10/2026)
+     · revisar: a cada trimestre ou quando mudar oferta (ex.: fim da fase grátis)
+     · tipo: marketplace regional de duas pontas (cliente que precisa transportar veículo ↔ guincheiro)
      · MARCA SEPARADA da JM Transportes e Auto Socorro / DIA E NOITE — não misturar voz, perfis nem provas
-     · itens marcados [A CONFIRMAR] são palpites — não publicar números/afirmações marcados assim -->
+     · itens [A CONFIRMAR] são palpites — não publicar números/afirmações marcados assim -->
 
 ## Identidade
-- **O que é (uma frase):** Guincho Fácil é o app para chamar guincho e socorro na hora, pelo celular, com pagamento por Pix ou cartão, atendido por uma rede de guincheiros parceiros.
-- **Categoria:** guincho e autossocorro sob demanda (app) + rede de guincheiros parceiros.
-- **Separação de marcas:** GF e JM / DIA E NOITE são marcas separadas. O GF não usa o nome, a frota, as filiais nem os números da JM como prova, e a JM terá perfil próprio.
-- **Área de atuação inicial:** Fronteira Oeste e Campanha do RS [A CONFIRMAR]
+- **O que é (uma frase):** o GF conecta quem precisa transportar um veículo ao guincheiro que já está passando por ali — e faz o caminhão do guincheiro não voltar vazio.
+- **Slogan do site:** "O seu caminhão nunca mais volta vazio."
+- **Categoria:** rede/marketplace de fretes de guincho (retorno vazio, frete avulso, repasse entre colegas) + gestão do serviço + antecipação de recebíveis via parceiro.
+- **Área de atuação:** Fronteira Oeste e região central do RS — Alegrete, Uruguaiana, Rosário do Sul, São Gabriel, Santa Maria, Bagé e arredores. Lista de espera para outras regiões.
+- **Formato:** app web (PWA) — não está na loja; instala pelo navegador ("Instalar" no Android / "Adicionar à Tela de Início" no iPhone).
+- **Fase atual:** gratuito para clientes e guincheiros.
 
 ## Posicionamento
-- **O que é diferente:** guincho pelo app com preço na hora, acompanhamento em tempo real e pagamento por Pix ou cartão, com guincheiros locais que conhecem a região. [A CONFIRMAR diferencial principal]
-- **Por que acreditar:** [A CONFIRMAR] número de guincheiros na rede, atendimentos feitos pelo app, avaliações.
+- **O que é diferente:** não é um app de "chamar guincho de emergência". É a rede que aproveita a estrada: o guincheiro anuncia a rota (inclusive a volta vazia) e recebe pedidos no caminho, mostrando quantos km cada um desvia. O cliente pede uma vez e recebe propostas de quem já vai passar ali.
+- **Por que acreditar:** feito para quem vive do guincho (linguagem e dores do ofício); guincheiros conferidos pela equipe GF antes de propor; avaliação do cliente após cada serviço; WhatsApp só liberado depois do aceite.
 - **Ponto de vista (o que defendemos):**
-  1. Quem está parado na estrada precisa de resposta, não de promessa — informar preço e acompanhamento é obrigação.
-  2. Guincheiro bom merece receber em dia. Pagamento garantido e repasse rápido valorizam o profissional. [A CONFIRMAR benefícios]
-  3. O interior também merece serviço de cidade grande.
-- **Não dizemos:** "o mais barato", "o melhor do Brasil", "chegamos em X minutos garantido" (sem dado medido), nada que diminua concorrente pelo nome.
+  1. **Caminhão voltando vazio é dinheiro jogado na estrada.** Diesel, pneu, freio e horas sem faturar saem do bolso do guincheiro.
+  2. **Guincheiro ajuda guincheiro.** Chamado longe demais ou agenda cheia? Repasse para um colega em vez de perder o cliente.
+  3. **O preço é do guincheiro.** O GF não fica com parte do valor; o acerto é direto entre cliente e guincheiro.
+  4. **Quem trabalhou não pode ficar sem caixa esperando seguradora pagar em 30/60 dias.**
+- **Não dizemos:** que o GF processa pagamento ou garante o serviço; que a antecipação é do GF (é da JK Invest); "dinheiro garantido" (é sujeito a aprovação); "o mais barato"; tempo de chegada garantido.
 
 ## Público
-### Segmento 1 — Motorista da região (prioridade)
-- **Quem:** quem dirige na Fronteira Oeste e Campanha (Alegrete, São Gabriel, Bagé, BR-290/BR-293 e arredores): moradores, motoristas de aplicativo, produtores rurais, quem viaja pela região.
-- **Se importa com:** ser atendido rápido, saber quanto vai pagar antes, segurança (principalmente à noite e na estrada), não ser enrolado.
-- **Acredita / objeções:** "guincho é caro e cobram o que querem", "app é coisa de cidade grande, aqui não funciona", "prefiro ligar para alguém conhecido".
-- **Onde:** Instagram e Facebook (grupos locais), WhatsApp; atenção baixa — só lembra de guincho quando precisa.
-- **Sofisticação:** iniciante. Explicar simples.
-- **Transformação:** de "carro parado, sem saber quem chamar nem quanto vai custar" → "pedi pelo app, vi o preço, acompanhei o guincho chegar".
+### Segmento 1 — Guincheiro (prioridade: é quem faz a rede existir)
+- **Quem:** dono de guincho/plataforma autônomo, MEI ou pequena empresa na Fronteira Oeste e região central do RS.
+- **Dores (as do site):** combustível da volta pago do bolso; horas na estrada sem faturar; manutenção gasta do mesmo jeito; seguradora pagando em 30/60 dias; serviço perdido por estar longe ou com agenda cheia.
+- **Quer:** rodar mais e perder menos km; caixa para o diesel e a próxima saída; saber quanto realmente sobra de cada serviço.
+- **Objeções prováveis:** "app vai ficar com uma parte", "mais um grupo de WhatsApp", "não confio em antecipação/financeira", "vai expor meu número".
+- **Onde:** grupos de Facebook e WhatsApp de guincheiros, Instagram, TikTok/Reels de rotina de estrada.
+- **Transformação:** de "volto vazio e espero a seguradora pagar" → "pego frete na volta e antecipo o que tenho a receber".
 
-### Segmento 2 — Guincheiro parceiro
-- **Quem:** donos de guincho e autossocorro autônomos ou pequenas empresas no RS (e expansão futura).
-- **Se importa com:** chamados constantes, receber em dia, menos tempo procurando cliente, não ficar voltando vazio.
-- **Acredita / objeções:** "app fica com o meu dinheiro", "atrasa pagamento igual seguradora", "vou ser explorado".
-- **Onde:** Facebook (grupos de guincheiros), WhatsApp, Instagram, TikTok/Reels de rotina de guincho.
-- **Sofisticação:** especialista no serviço, iniciante em app.
-- **Benefícios para comunicar:** [A CONFIRMAR] pagamento via Pix, repasse antecipado em até 1 dia útil (com taxa de antecipação), chamados chegando no celular, sem mensalidade(?).
-- **Transformação:** de "depender de indicação e esperar o prazo da seguradora" → "receber chamados pelo app e dinheiro na conta rápido".
+### Segmento 2 — Quem precisa transportar um veículo
+- **Quem:** pessoa ou empresa que precisa levar carro, moto, utilitário ou caminhão de uma cidade a outra (compra/venda de veículo, carro parado em outra cidade, revenda, oficina, frota).
+- **Quer:** pedir uma vez, comparar valor, prazo e nota, e acompanhar até a entrega.
+- **Objeções:** "é confiável?", "vão ter meu telefone?", "sai mais caro?".
+- **Transformação:** de "não sei quem chamar nem quanto custa" → "recebi propostas de quem já ia passar no caminho e acompanhei a entrega".
+- **Atenção:** o foco é transporte/frete agendado, não socorro de emergência. Não prometer atendimento imediato 24h.
+
+## Funcionalidades (fonte: site)
+- **Conectar:** anunciar retorno vazio (origem, destino, horário, equipamento); pedidos de frete avulso na rota com km de desvio; repasse de serviço entre colegas; vagas de ida e volta.
+- **Operar:** proposta, aceite, contato direto no WhatsApp, etapas registradas (a caminho → no local → em transporte → entregue).
+- **Entender o lucro:** calculadora "Quanto sobra?" (combustível, pedágio, manutenção e impostos).
+- **Antecipar:** Serviços › Antecipar → pedido encaminhado à **JK Invest** (securitizadora parceira, CNPJ 53.662.389/0001-05); proposta com taxa antes de aceitar; até 3h para cair após aprovação; PF, MEI e empresa; recebíveis de seguradora, empresa, cartão ou Pix a prazo; **TED não entra**.
 
 ## Voz
-- **Dimensões:** Formalidade 2/5 · Calor humano 4/5 · Autoridade 4/5 · Energia 3/5 · Humor 2/5 · Acabamento 3/5
+- **Dimensões:** Formalidade 2/5 · Calor humano 4/5 · Autoridade 3/5 · Energia 3/5 · Humor 2/5 · Acabamento 3/5
 - **Soamos ___, nunca ___:**
-  - parceiro de estrada, nunca vendedor de shopping
-  - direto e claro, nunca enrolado ou cheio de letra miúda
-  - calmo na hora do aperto, nunca dramático com acidente
+  - colega de estrada, nunca startup de tecnologia
+  - conta na ponta do lápis, nunca promessa vaga
+  - direto e curto, nunca letra miúda
   - gaúcho na medida, nunca caricato
-- **Palavras que usamos:** "chamar o guincho", "socorro", "na estrada", "a gente vai até você", "preço na hora", "acompanha pelo app", "parceiro" (para guincheiro), nomes das cidades e rodovias.
-- **Palavras proibidas:** "solução inovadora", "disruptivo", "o melhor do mercado", "garantido em X minutos", "imperdível", "revolucionário", clichês de IA ("no mundo de hoje", "não é só X, é Y").
-- **Situações difíceis:** atraso ou reclamação → reconhecer, responder no privado, resolver; nunca discutir em comentário. Preço → explicar o que está incluso, sem esconder.
-- **Recursos de assinatura:** frases curtas; começar pelo problema real ("Pneu furou na BR-290 às 23h?"); emoji com moderação (🚛 📍 ✅ no máximo 2 por post); 3–5 hashtags locais (#Alegrete #SãoGabriel #Bagé #FronteiraOeste #GuinchoFácil); CTA sempre clara no fim.
-- **Por plataforma:** Instagram/Reels = rotina real e dicas curtas; Facebook = posts locais e grupos da cidade; TikTok = bastidores do guincheiro; WhatsApp = atendimento, não propaganda.
-- **Pronúncia:** "Guincho Fácil" (guín-cho fá-sil); "Alegrete" (a-le-grê-te); "Bagé" (ba-gé).
+- **Palavras que usamos (do site):** "voltar vazio", "retorno vazio", "frete avulso", "na sua rota", "km de desvio", "plataforma livre", "repasse", "guincheiro ajuda guincheiro", "quanto sobra?", "conexões", "a caminho / no local / em transporte / entregue", "conferidos".
+- **Palavras proibidas:** "solução inovadora", "disruptivo", "revolucionário", "dinheiro garantido", "sem taxa" (a antecipação tem taxa), "o GF paga você", "o mais barato", clichês de IA.
+- **Recursos de assinatura:** exemplo real de rota como gancho ("Saio de Santa Maria para Alegrete hoje às 14h. Plataforma livre."); números concretos (km, horas, R$ de diesel); frases curtas; no máximo 2 emojis (🚛 📍 ✅); 3–5 hashtags locais (#Alegrete #SantaMaria #Uruguaiana #FronteiraOeste #GuinchoFácil).
+- **Pronúncia:** "GF" (gê-éfe); "Guincho Fácil" (guín-cho fá-sil); "JK Invest" (jota-cá invést).
 
 ## Provas
-- **Números:** [A CONFIRMAR] atendimentos pelo app, tempo médio de chegada, guincheiros cadastrados, cidades atendidas. Nunca usar números da JM.
-- **Clientes nomeados:** **não citar nomes de seguradoras ou empresas sem autorização por escrito.**
-- **Resultados de caso:** [A CONFIRMAR] histórias reais de atendimento (com consentimento do cliente).
-- **Credenciais:** [A CONFIRMAR] atendimento 24h pelo app.
-- **Prova social:** [A CONFIRMAR] avaliações no Google / loja de apps.
-- **Direitos de uso:** só publicar depoimento, rosto ou carro de cliente com autorização; repost orgânico e anúncio pago são permissões diferentes — registrar qual foi dada.
+- **Do site (pode usar):** grátis nesta fase; guincheiros conferidos pela equipe; avaliação do cliente após cada serviço; WhatsApp só liberado após aceite; GF não fica com parte do valor; antecipação em até 3h após aprovação (pela JK Invest).
+- **[A CONFIRMAR]:** quantos guincheiros na rede, fretes feitos, km de retorno vazio aproveitados, valor antecipado, histórias reais de guincheiros (com autorização).
 
 ## Ofertas e CTAs
-- **CTA principal (motorista):** "Baixe o Guincho Fácil" / "Peça seu guincho pelo app" → guinchofacil.app.br
-- **CTA principal (guincheiro):** "Cadastre seu guincho e receba chamados" [A CONFIRMAR link de cadastro]
-- **CTAs secundárias:** salvar o post ("salva pra quando precisar"), seguir, chamar no WhatsApp [A CONFIRMAR número].
-- **Regras de venda:** 1 post de venda direta a cada 3–4 de utilidade (dicas, bastidores, rotina); nunca usar acidente grave como gancho de venda.
+- **Guincheiro:** "Sou guincheiro" / "Divulgar minha rota" → appdoguincheiro.com
+- **Cliente:** "Preciso transportar um veículo" → appdoguincheiro.com
+- **Fora da área:** "Deixe seu contato para ser avisado quando o GF chegar na sua região."
+- **Secundárias:** salvar o post, marcar um colega guincheiro, seguir.
+- **Regras:** post sobre antecipação sempre com "pela JK Invest, sujeito a aprovação, taxa informada antes"; nunca vender antecipação como "dinheiro grátis".
 
 ## Canais
-- **Ativos:** Instagram **@guinchofacil.app** [A CONFIRMAR: Facebook, TikTok]
-- **Frequência:** [A CONFIRMAR] — sugestão inicial: 3 posts/semana + stories diários.
-- **Links:** guinchofacil.app.br · centraldoguincho.store
-- **Idioma / mercado:** português do Brasil, linguagem do RS; foco em Fronteira Oeste e Campanha.
+- **Ativos:** Instagram **@guinchofacil.app** [A CONFIRMAR: Facebook, TikTok, WhatsApp oficial]
+- **Site:** appdoguincheiro.com [A CONFIRMAR: guinchofacil.app.br ainda é usado?]
+- **Idioma / mercado:** português do Brasil, linguagem do RS.
 
 ## Padrões operacionais
-- **IA e mídia sintética:** imagens/vídeos gerados por IA só para ilustração e identificados como tal; nunca simular acidente real, cliente real ou guincheiro real; sem clone de voz de terceiros (só voz própria, com consentimento). Preferir sempre foto/vídeo real dos guincheiros parceiros (com autorização). [A CONFIRMAR]
-- **Acessibilidade:** legenda sempre ligada em vídeo (muita gente assiste sem som); texto alternativo em toda imagem; contraste alto (navy + branco/dourado).
-- **Identidade visual:** [A CONFIRMAR se o GF usa as mesmas cores da JM] azul-marinho `#0F3460` + dourado `#D4A24C`, base branca, tipografia forte; evitar amarelo vivo e fundo todo preto. Detalhes de logo/fonte → `design-and-templates`.
+- **IA e mídia sintética:** imagem por IA só ilustrativa e identificada; nunca simular guincheiro, cliente, caminhão ou depoimento real; preferir sempre foto/vídeo real da estrada. [A CONFIRMAR]
+- **Acessibilidade:** legenda sempre ligada em vídeo; texto alternativo em toda imagem; contraste alto.
+- **Identidade visual:** [A CONFIRMAR as cores do GF — usar as do site]. Detalhes → `design-and-templates`.
 
 ## Limites
-- **Proibido:** expor placa, rosto ou dados de cliente sem autorização (LGPD); fotos de acidente com vítimas; piada com acidente; prometer tempo de chegada sem dado real.
-- **Legal:** não citar seguradoras parceiras sem autorização; preços publicados devem ser os praticados no app; promoções com regra clara.
-- **Concorrentes:** nunca citar pelo nome nem comparar diretamente.
-- **Sensibilidade:** acidentes, mortes na estrada, enchentes — tom de serviço e segurança, nunca oportunismo.
+- **Antecipação (financeiro):** sempre deixar claro que análise, taxa e pagamento são da JK Invest; "sujeito a aprovação"; taxa caso a caso, informada antes; nunca prometer aprovação nem taxa específica. [Revisar textos com a JK Invest antes de anúncios pagos]
+- **Pagamento:** o GF não processa pagamentos — nunca sugerir que o GF garante ou intermedeia o dinheiro do frete.
+- **Privacidade (LGPD):** não expor telefone, placa ou rosto de cliente/guincheiro sem autorização.
+- **Concorrentes:** não citar pelo nome. Não mencionar JM / DIA E NOITE.
+- **Sensibilidade:** acidentes com vítimas — fora de pauta.
 
 ## Mostre, não diga — posts de referência
-- **Gostamos:** [A CONFIRMAR — 3 a 5 posts que vocês curtem, de qualquer marca, e por quê]
-- **Não gostamos:** [A CONFIRMAR — 1 ou 2 e por quê]
+- **Gostamos:** [A CONFIRMAR — 3 a 5 posts e por quê]
+- **Não gostamos:** [A CONFIRMAR]
 
 ## Notas
-- Sazonalidade: feriados e férias (mais estrada), inverno/chuva no RS (mais pane e atolamento), safra (tráfego rural).
-- O mesmo app atende os dois públicos: separar bem os posts de motorista e os de guincheiro para não confundir.
+- Ideias de série: "Rota do dia" (retornos vazios reais anunciados), "Quanto sobra?" (conta de um frete real), "Guincheiro ajuda guincheiro" (repasses), "Volta vazia custa quanto?".
+- Quando acabar a fase grátis, atualizar este perfil e todos os posts que dizem "grátis".
