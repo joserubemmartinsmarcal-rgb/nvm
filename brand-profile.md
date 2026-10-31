@@ -1,17 +1,20 @@
 # Perfil de Marca — GF · Guincho Fácil
-<!-- versão: 0.3 · atualizado: 31/10/2026 · fonte principal: appdoguincheiro.com (lido em 31/10/2026)
+<!-- versão: 0.4 · atualizado: 31/10/2026 · fontes: appdoguincheiro.com (lido em 31/10/2026) + plano "Aquecimento de lançamento: 4 semanas" (Aquecimento_GF.pdf)
      · revisar: a cada trimestre ou quando mudar oferta (ex.: fim da fase grátis)
      · tipo: marketplace regional de duas pontas (cliente que precisa transportar veículo ↔ guincheiro)
-     · MARCA SEPARADA da JM Transportes e Auto Socorro / DIA E NOITE — não misturar voz, perfis nem provas
+     · MARCA SEPARADA da JM Transportes e Auto Socorro / DIA E NOITE (perfil próprio). No aquecimento a JM entra só como apoio: motoristas da JM, collab com @jmtransportes.me [A CONFIRMAR o limite]
      · itens [A CONFIRMAR] são palpites — não publicar números/afirmações marcados assim -->
 
 ## Identidade
 - **O que é (uma frase):** o GF conecta quem precisa transportar um veículo ao guincheiro que já está passando por ali — e faz o caminhão do guincheiro não voltar vazio.
-- **Slogan do site:** "O seu caminhão nunca mais volta vazio."
+- **Assinatura:** "GF · Conexões que movem." (#ConexoesQueMovem)
+- **Frases-chave:** "O seu caminhão nunca mais volta vazio." (site) · "Ida com chamado. Volta com frete." · "Guincheiro ajuda guincheiro."
 - **Categoria:** rede/marketplace de fretes de guincho (retorno vazio, frete avulso, repasse entre colegas) + gestão do serviço + antecipação de recebíveis via parceiro.
 - **Área de atuação:** Fronteira Oeste e região central do RS — Alegrete, Uruguaiana, Rosário do Sul, São Gabriel, Santa Maria, Bagé e arredores. Lista de espera para outras regiões.
 - **Formato:** app web (PWA) — não está na loja; instala pelo navegador ("Instalar" no Android / "Adicionar à Tela de Início" no iPhone).
-- **Fase atual:** gratuito para clientes e guincheiros.
+- **Fase atual:** aquecimento com lista de espera (26/10 a 22/11). **Lançamento: segunda, 23/11, 8h**, para guincheiros do RS. Uso gratuito nesta fase.
+- **Oferta de lançamento — Fundadores GF:** os primeiros da lista ganham selo de Fundador no perfil + prioridade nos pedidos da sua rota por 3 meses (23/11 a 23/02). Vagas até 22/11.
+- **Meta do aquecimento:** 100 guincheiros na lista, 30 da Fronteira Oeste.
 
 ## Posicionamento
 - **O que é diferente:** não é um app de "chamar guincho de emergência". É a rede que aproveita a estrada: o guincheiro anuncia a rota (inclusive a volta vazia) e recebe pedidos no caminho, mostrando quantos km cada um desvia. O cliente pede uma vez e recebe propostas de quem já vai passar ali.
@@ -54,7 +57,8 @@
   - gaúcho na medida, nunca caricato
 - **Palavras que usamos (do site):** "voltar vazio", "retorno vazio", "frete avulso", "na sua rota", "km de desvio", "plataforma livre", "repasse", "guincheiro ajuda guincheiro", "quanto sobra?", "conexões", "a caminho / no local / em transporte / entregue", "conferidos".
 - **Palavras proibidas:** "solução inovadora", "disruptivo", "revolucionário", "dinheiro garantido", "sem taxa" (a antecipação tem taxa), "o GF paga você", "o mais barato", clichês de IA.
-- **Recursos de assinatura:** exemplo real de rota como gancho ("Saio de Santa Maria para Alegrete hoje às 14h. Plataforma livre."); números concretos (km, horas, R$ de diesel); frases curtas; no máximo 2 emojis (🚛 📍 ✅); 3–5 hashtags locais (#Alegrete #SantaMaria #Uruguaiana #FronteiraOeste #GuinchoFácil).
+- **Recursos de assinatura:** pergunta como gancho ("Quantos quilômetros você já voltou vazio?"); exemplo real de rota ("Saio de Santa Maria para Alegrete hoje às 14h. Plataforma livre."); números concretos (km, horas, R$ de diesel); frases curtas; fecha com "GF · Conexões que movem." + CTA; poucos ou nenhum emoji; tratamento "você" no feed e "tu" nos stories.
+- **Hashtags (bloco padrão do plano):** #guincheiro #guincho #autossocorro #guinchoplataforma #retornovazio #frete #fretes #transportedeveiculos #reboque #riograndedosul #fronteiraoeste #GuinchoFacil #ConexoesQueMovem [revisar: o Instagram vem limitando/recomendando poucas hashtags por post — preferir as 5 mais fortes]
 - **Pronúncia:** "GF" (gê-éfe); "Guincho Fácil" (guín-cho fá-sil); "JK Invest" (jota-cá invést).
 
 ## Provas
@@ -62,6 +66,7 @@
 - **[A CONFIRMAR]:** quantos guincheiros na rede, fretes feitos, km de retorno vazio aproveitados, valor antecipado, histórias reais de guincheiros (com autorização).
 
 ## Ofertas e CTAs
+- **Até 22/11 (aquecimento):** "Lista de espera no link da bio: appdoguincheiro.com" em toda legenda a partir de 02/11.
 - **Guincheiro:** "Sou guincheiro" / "Divulgar minha rota" → appdoguincheiro.com
 - **Cliente:** "Preciso transportar um veículo" → appdoguincheiro.com
 - **Fora da área:** "Deixe seu contato para ser avisado quando o GF chegar na sua região."
@@ -82,7 +87,9 @@
 - **Antecipação (financeiro):** sempre deixar claro que análise, taxa e pagamento são da JK Invest; "sujeito a aprovação"; taxa caso a caso, informada antes; nunca prometer aprovação nem taxa específica. [Revisar textos com a JK Invest antes de anúncios pagos]
 - **Pagamento:** o GF não processa pagamentos — nunca sugerir que o GF garante ou intermedeia o dinheiro do frete.
 - **Privacidade (LGPD):** não expor telefone, placa ou rosto de cliente/guincheiro sem autorização.
-- **Concorrentes:** não citar pelo nome. Não mencionar JM / DIA E NOITE.
+- **Concorrentes:** não citar pelo nome.
+- **JM:** só como apoio previsto no plano de aquecimento; nunca usar números, frota ou clientes da JM como prova do GF.
+- **Antes do lançamento:** não prometer preço, cidade ou função ainda não decidida ("a gente conta no lançamento"); protótipo sempre com selo "Prévia" e dados fictícios; só números reais na prova social.
 - **Sensibilidade:** acidentes com vítimas — fora de pauta.
 
 ## Mostre, não diga — posts de referência
@@ -90,5 +97,6 @@
 - **Não gostamos:** [A CONFIRMAR]
 
 ## Notas
+- **Fica para depois do lançamento:** Post 07 "Precisou? Chamou. Chegou." para o cliente final — segurado para não misturar com a mensagem do retorno.
 - Ideias de série: "Rota do dia" (retornos vazios reais anunciados), "Quanto sobra?" (conta de um frete real), "Guincheiro ajuda guincheiro" (repasses), "Volta vazia custa quanto?".
 - Quando acabar a fase grátis, atualizar este perfil e todos os posts que dizem "grátis".
