@@ -81,7 +81,7 @@
 ## Padrões operacionais
 - **IA e mídia sintética:** imagem por IA só ilustrativa e identificada; nunca simular guincheiro, cliente, caminhão ou depoimento real; preferir sempre foto/vídeo real da estrada. [A CONFIRMAR]
 - **Acessibilidade:** legenda sempre ligada em vídeo; texto alternativo em toda imagem; contraste alto.
-- **Identidade visual:** logo GF prata com a haste do F em azul (arquivo: gf-designs/src/logo-gf.png, original com fundo de estrada: logo-gf-original.png). Azul do logo ≈ #0068DA (destaque nas artes #2A86FF), fundo azul-marinho #0A1524, faixa tracejada branca/prata como "estrada". Sem dourado. Fontes: Inter Display (títulos), Inter (texto), JetBrains Mono (detalhes). Não redesenhar nem recolorir o logo.
+- **Identidade visual:** logo GF prata com a haste do F em azul (arquivos em gf-designs/logo/: logo-gf.svg/.png para fundo escuro, logo-gf-fundo-claro.svg/.png para fundo claro, logo-gf-original.png com fundo de estrada). Azul do logo ≈ #0068DA (destaque nas artes #2A86FF), fundo azul-marinho #0A1524, faixa tracejada branca/prata como "estrada". Sem dourado. Fontes: Inter Display (títulos), Inter (texto), JetBrains Mono (detalhes). Não redesenhar nem recolorir o logo.
 
 ## Limites
 - **Antecipação (financeiro):** sempre deixar claro que análise, taxa e pagamento são da JK Invest; "sujeito a aprovação"; taxa caso a caso, informada antes; nunca prometer aprovação nem taxa específica. [Revisar textos com a JK Invest antes de anúncios pagos]
