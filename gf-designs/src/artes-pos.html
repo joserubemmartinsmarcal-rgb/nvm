@@ -1,115 +1,101 @@
 <!DOCTYPE html><html lang="pt-BR"><head><meta charset="utf-8"><link rel="stylesheet" href="artes.css"></head><body>
-<!-- Campos em rosa tracejado (.ph) = dado real a preencher. Rotas do mapa: atributo data-routes. -->
-<template id="foot"><div class="road"></div><div class="foot"><div class="logo"><img src="logo-gf.svg" alt="GF"><span>Guincho Fácil<small>CONEXÕES QUE MOVEM</small></span></div><div class="url">appdoguincheiro.com</div></div></template>
+<!-- Rosa tracejado (.ph) = dado real a preencher. Rotas dos mapas: atributo data-routes. -->
 
-<!-- 14/11 e 20/11 · Mapa de rotas (story, pré-lançamento) -->
-<div class="art story" id="14-11_mapa-rotas-story"><div class="kick">Rede GF</div><div class="tagex">ROTAS DE EXEMPLO</div>
-<h1 class="m">Rotas que já estão na <span class="blue">rede.</span></h1>
-<svg class="map" width="912" height="640" data-routes="Alegrete-Uruguaiana;Alegrete-Santa Maria;Santana do Livramento-Rosário do Sul"></svg>
-<div class="p">Tua rota não tá aqui? <b>Entra na lista e conta.</b></div><div data-foot></div></div>
+<div class="art story dark" id="14-11_mapa-rotas-story" data-lock><span class="ex top">Exemplo</span>
+<div class="kick">Rede GF</div><h1 class="m">Rotas que já estão na <span class="b">rede.</span></h1>
+<svg class="map" width="904" height="640" data-routes="Alegrete-Uruguaiana;Alegrete-Santa Maria;Santana do Livramento-Rosário do Sul"></svg>
+<p class="p">Tua rota não tá aqui? <strong>Entra na lista e conta.</strong></p></div>
 
-<!-- 24/11 · story Abrimos -->
-<div class="art story" id="24-11_abrimos-story"><div class="kick">24/11</div>
-<h1>Ontem o GF <span class="blue">abriu.</span></h1>
-<div class="card"><div class="t">Guincheiros que já entraram</div><div class="r"><span class="ph">[X]</span></div></div>
-<div class="card"><div class="t">Cidades</div><div class="r"><span class="ph">[Y]</span></div></div>
-<div class="p">Já anunciou tua rota? <b>Leva 1 minuto.</b></div><div data-foot></div></div>
+<div class="art story dark" id="24-11_abrimos-story" data-photo="plataforma-chuva" data-lock>
+<div class="bottom"><div class="kick">24/11</div><h1>Ontem o GF <span class="b">abriu.</span></h1>
+<div class="card"><div class="t">Guincheiros que já entraram</div><div class="r"><span class="ph">[X]</span> de <span class="ph">[Y]</span> cidades</div></div>
+<p class="p">Já anunciou tua rota? <strong>Leva 1 minuto.</strong></p></div></div>
 
-<!-- 25/11 · Post 08 Tutorial (carrossel 5) -->
-<div class="art feed" id="25-11_tutorial-1"><div class="kick">Passo a passo</div><div class="count">1/5</div>
-<h1>Como anunciar seu retorno em <span class="blue">1 minuto.</span></h1><div class="p">Salve e mande para o parceiro que ainda volta vazio.</div><div class="swipe">Arrasta →</div><div data-foot></div></div>
-<div class="art feed" id="25-11_tutorial-2"><div class="kick">Passo a passo</div><div class="count">2/5</div>
-<div class="half"><div class="stepn">1</div><h1 class="s">Abra o app e toque em <span class="blue">anunciar retorno.</span></h1></div>
-<div class="phone"><span>print real do app: tela inicial</span></div><div data-foot></div></div>
-<div class="art feed" id="25-11_tutorial-3"><div class="kick">Passo a passo</div><div class="count">3/5</div>
-<div class="half"><div class="stepn">2</div><h1 class="s">Escolha de onde sai, para onde volta e o <span class="blue">horário.</span></h1></div>
-<div class="phone"><span>print real do app: origem, destino e horário</span></div><div data-foot></div></div>
-<div class="art feed" id="25-11_tutorial-4"><div class="kick">Passo a passo</div><div class="count">4/5</div>
-<div class="half"><div class="stepn">3</div><h1 class="s">Diga o equipamento: plataforma, reboque, <span class="blue">asa-delta.</span></h1></div>
-<div class="phone"><span>print real do app: equipamento</span></div><div data-foot></div></div>
-<div class="art feed" id="25-11_tutorial-5"><div class="kick">Passo a passo</div><div class="count">5/5</div>
-<div class="half"><div class="stepn">4</div><h1 class="s">Pronto: os pedidos que cabem no caminho <span class="blue">aparecem.</span></h1></div>
-<div class="phone"><span>print real do app: pedidos na rota com km de desvio</span></div><div data-foot></div></div>
+<!-- 25/11 Tutorial -->
+<div class="art feed dark" id="25-11_tutorial-1" data-photo="guincho-pesado-caminhao-tanque" data-n="1/5" data-arrow data-lock>
+<div class="bottom"><div class="kick">Passo a passo</div><h1>Como anunciar seu retorno em <span class="b">1 minuto.</span></h1><p class="p">Salve e mande para o parceiro que ainda volta vazio.</p></div></div>
+<div class="art feed light" id="25-11_tutorial-2" data-n="2/5" data-arrow><div class="half"><div class="kick">Passo 1</div><h1 class="s">Abra o app e toque em <span class="b">anunciar retorno.</span></h1></div><div class="phone"><span>print real do app: tela inicial</span></div></div>
+<div class="art feed light" id="25-11_tutorial-3" data-n="3/5" data-arrow><div class="half"><div class="kick">Passo 2</div><h1 class="s">Escolha de onde sai, para onde volta e o <span class="b">horário.</span></h1></div><div class="phone"><span>print real do app: origem, destino e horário</span></div></div>
+<div class="art feed light" id="25-11_tutorial-4" data-n="4/5" data-arrow><div class="half"><div class="kick">Passo 3</div><h1 class="s" style="font-size:68px">Diga o equipamento: plataforma, reboque, <span class="b">asa-delta.</span></h1></div><div class="phone"><span>print real do app: equipamento</span></div></div>
+<div class="art feed light" id="25-11_tutorial-5" data-n="5/5"><div class="half"><div class="kick">Passo 4</div><h1 class="s">Pronto: os pedidos que cabem no caminho <span class="b">aparecem.</span></h1></div><div class="phone"><span>print real do app: pedidos na rota com km de desvio</span></div></div>
 
-<!-- 30/11 · Post 09 Rota do dia (feed) + story -->
-<div class="art feed" id="30-11_rota-do-dia-feed"><div class="kick">Rota do dia</div>
-<h1 class="m">Tem um veículo para levar <span class="blue">nesse caminho?</span></h1>
+<!-- 30/11 Rota do dia -->
+<div class="art feed dark" id="30-11_rota-do-dia-feed" data-lock>
+<div class="kick">Rota do dia</div><h1 class="m">Tem um veículo para levar <span class="b">nesse caminho?</span></h1>
 <div class="route"><div class="c"><span class="ph">[Cidade]</span> <i>›</i> <span class="ph">[Cidade]</span></div><div class="m"><span class="ph">[dia, hora]</span> · <span class="ph">[equipamento]</span> · <span class="ph">[vagas]</span></div></div>
-<div class="p">Peça no app e o guincheiro manda a proposta. <b>Toda segunda tem rota nova.</b></div><div data-foot></div></div>
-<div class="art story" id="rota-do-dia-story"><div class="kick">Rota do dia</div>
-<h1>Saindo <span class="blue">hoje.</span></h1>
+<div class="btns"><div class="btn">Peça em appdoguincheiro.com</div><div class="btn o">Toda segunda tem rota nova</div></div></div>
+<div class="art story dark" id="rota-do-dia-story" data-photo="pesado-carregado-rodovia" data-lock>
+<div class="bottom"><div class="kick">Rota do dia</div><h1>Saindo <span class="b">hoje.</span></h1>
 <div class="route"><div class="c"><span class="ph">[Cidade]</span> <i>›</i> <span class="ph">[Cidade]</span></div><div class="m"><span class="ph">[hora]</span> · <span class="ph">[equipamento]</span> · <span class="ph">[vagas]</span></div></div>
-<div class="p">Precisa levar um veículo nesse caminho? <b>Pede no GF.</b></div><div data-foot></div></div>
+<p class="p">Precisa levar um veículo nesse caminho? <strong>Pede no GF.</strong></p></div></div>
 
-<!-- 02/12 · Post 10 Quanto custa voltar vazio (carrossel 4) -->
-<div class="art feed" id="02-12_volta-vazia-1"><div class="kick">Faz a conta</div><div class="count">1/4</div>
-<h1>Quanto custa voltar <span class="blue">vazio?</span></h1><div class="p">Um exemplo de 250 km de volta.</div><div class="swipe">Arrasta →</div><div data-foot></div></div>
-<div class="art feed" id="02-12_volta-vazia-2"><div class="kick">Exemplo</div><div class="count">2/4</div>
-<h1 class="s">Primeiro, o diesel.</h1>
-<div class="calc"><div class="row">Volta vazia<b>250 km</b></div><div class="row">Consumo do caminhão<b>4 km/l</b></div><div class="row">Diesel gasto<b class="blue">62,5 litros</b></div></div><div data-foot></div></div>
-<div class="art feed" id="02-12_volta-vazia-3"><div class="kick">Exemplo</div><div class="count">3/4</div>
-<h1 class="s">Agora em reais.</h1>
-<div class="calc"><div class="row">62,5 litros ×<b><span class="ph">R$ [diesel]</span></b></div><div class="row">Só de combustível<b class="blue"><span class="ph">R$ [total]</span></b></div></div>
-<div class="p">Sem contar pneu, freio e as <b>horas sem faturar.</b></div><div data-foot></div></div>
-<div class="art feed" id="02-12_volta-vazia-4"><div class="kick">Quanto sobra?</div><div class="count">4/4</div>
-<h1 class="m">Faça a conta de cada frete no <span class="blue">GF.</span></h1>
-<div class="p">A calculadora <b>“Quanto sobra?”</b> junta combustível, pedágio, manutenção e impostos numa conta só.</div>
-<div class="pill">appdoguincheiro.com</div><div data-foot></div></div>
+<!-- 02/12 Volta vazia -->
+<div class="art feed dark" id="02-12_volta-vazia-1" data-photo="pesado-carregado-rodovia" data-n="1/4" data-arrow data-lock>
+<div class="bottom"><div class="kick">Faz a conta</div><h1>Quanto custa voltar <span class="b">vazio?</span></h1><p class="p">Um exemplo de 250 km de volta.</p></div></div>
+<div class="art feed light" id="02-12_volta-vazia-2" data-n="2/4" data-arrow><span class="ex top">Exemplo</span>
+<div class="kick">Primeiro, o diesel</div><h1 class="m">Quanto vai no <span class="b">tanque?</span></h1>
+<div class="card"><div class="row">Volta vazia<b>250 km</b></div><div class="row">Consumo do caminhão<b>4 km/l</b></div><div class="row">Diesel gasto<b class="b">62,5 litros</b></div></div></div>
+<div class="art feed light" id="02-12_volta-vazia-3" data-n="3/4" data-arrow><span class="ex top">Exemplo</span>
+<div class="kick">Agora em reais</div><h1 class="m">Quanto sai do <span class="b">bolso?</span></h1>
+<div class="card"><div class="row">62,5 litros × diesel<b>R$ 6,20</b></div>
+<div class="result" style="background:#fdeaea;border-color:#b3261e"><b style="color:#9b1c14">R$ 387,50</b><span style="color:#5a2a26">só de combustível, sem frete nenhum</span></div></div>
+<p class="small">Exemplo com 250 km, 4 km/l e diesel a R$ 6,20. Sem contar pneu, freio e as horas sem faturar.</p></div>
+<div class="art feed dark" id="02-12_volta-vazia-4" data-n="4/4" data-lock>
+<div class="kick">Calculadora “Quanto sobra?”</div><h1 class="m">Faça a conta de cada frete no <span class="b">GF.</span></h1>
+<ul class="checks"><li><span><strong>Combustível</strong> e pedágio</span></li><li><span><strong>Manutenção</strong> por km</span></li><li><span><strong>Impostos</strong> numa conta só</span></li></ul>
+<div class="btns"><div class="btn">appdoguincheiro.com</div><div class="btn o">Link na bio · @guinchofacil.app</div></div></div>
 
-<!-- 07/12 · Post 11 Repasse (carrossel 3) -->
-<div class="art feed" id="07-12_repasse-1"><div class="kick">Guincheiro ajuda guincheiro</div><div class="count">1/3</div>
-<h1>Chamado longe demais? <span class="blue">Agenda cheia?</span></h1><div class="swipe">Arrasta →</div><div data-foot></div></div>
-<div class="art feed" id="07-12_repasse-2"><div class="kick">Repasse</div><div class="count">2/3</div>
-<div class="half"><h1 class="s" style="margin-top:70px">Repasse para um colega que está <span class="blue">perto.</span></h1><div class="p" style="font-size:38px">Em vez de perder o cliente.</div></div>
-<div class="phone"><span>print real do app: repassar serviço</span></div><div data-foot></div></div>
-<div class="art feed" id="07-12_repasse-3"><div class="kick">Repasse</div><div class="count">3/3</div>
-<h1 class="m">Cliente atendido. Colega trabalhando. <span class="blue">Ninguém volta vazio.</span></h1><div class="pill">appdoguincheiro.com</div><div data-foot></div></div>
+<!-- 07/12 Repasse -->
+<div class="art feed dark" id="07-12_repasse-1" data-photo="plataforma-chuva" data-n="1/3" data-arrow data-lock>
+<div class="bottom"><div class="kick">Guincheiro ajuda guincheiro</div><h1>Chamado longe demais? <span class="b">Agenda cheia?</span></h1></div></div>
+<div class="art feed light" id="07-12_repasse-2" data-n="2/3" data-arrow><div class="half"><div class="kick">Repasse</div><h1 class="s">Repasse para um colega que está <span class="b">perto.</span></h1><p class="p" style="font-size:38px">Em vez de perder o cliente.</p></div><div class="phone"><span>print real do app: repassar serviço</span></div></div>
+<div class="art feed dark" id="07-12_repasse-3" data-n="3/3" data-lock>
+<div class="kick">Guincheiro ajuda guincheiro</div><h1 class="m">Cliente atendido. Colega trabalhando. <span class="b">Ninguém volta vazio.</span></h1>
+<div class="btns"><div class="btn">appdoguincheiro.com</div><div class="btn o">Link na bio · @guinchofacil.app</div></div></div>
 
-<!-- 09/12 · Post 07 Cliente final -->
-<div class="art feed" id="09-12_precisou-chamou-chegou"><div class="kick">Para quem precisa transportar</div>
-<h1>Precisou? Chamou. <span class="blue">Chegou.</span></h1>
-<div class="p">Carro, moto, utilitário ou caminhão para outra cidade? <b>Peça uma vez e receba propostas de guincheiros conferidos que já vão passar pelo caminho.</b></div>
-<div class="list"><div class="li"><i>1</i><div>Compare valor, prazo e nota</div></div><div class="li"><i>2</i><div>Acompanhe até a entrega</div></div></div>
-<div class="pill">Grátis para pedir</div><div data-foot></div></div>
+<!-- 09/12 Cliente -->
+<div class="art feed dark" id="09-12_precisou-chamou-chegou" data-lock>
+<div class="kick">Para motoristas e empresas</div><h1 class="m">Precisou? Chamou. <span class="b">Chegou.</span></h1>
+<div class="photo-card" style="height:380px"><img src="../fotos/plataforma-carro-entardecer.jpg"></div>
+<p class="p" style="font-size:38px">Carro, moto, utilitário ou caminhão para outra cidade? <strong>Peça uma vez e compare propostas.</strong></p>
+<div class="btns" style="bottom:96px"><div class="btn">Grátis · appdoguincheiro.com</div></div></div>
 
-<!-- 14/12 · Post 12 Antecipação -->
-<div class="art feed" id="14-12_antecipacao"><div class="kick">Antecipação · JK Invest</div>
-<h1 class="m">Seguradora pagando em 30, 60 <span class="blue">dias?</span></h1>
-<div class="p">Peça a antecipação do que você tem a receber, direto no app. <b>Aprovado, o dinheiro cai em até 3 horas.</b></div>
+<!-- 14/12 Antecipação -->
+<div class="art feed dark" id="14-12_antecipacao" data-lock>
+<div class="kick">Fez o serviço? Receba antes.</div><h1 class="m">Seguradora pagando em 30, 60 <span class="b">dias?</span></h1>
+<p class="p">Peça a antecipação do que você tem a receber, direto no app. <strong>Aprovado, o dinheiro cai em até 3 horas.</strong></p>
 <div class="card"><div class="t">Onde</div><div class="r">Serviços › Antecipar</div></div>
-<div class="disc">Análise, taxa e pagamento feitos pela JK Invest, securitizadora parceira (CNPJ 53.662.389/0001-05). Taxa informada antes da contratação. Sujeito a aprovação. Valores pagos por TED não entram.</div><div data-foot></div></div>
+<p class="small">Análise, taxa e pagamento feitos pela JK Invest, securitizadora parceira (CNPJ 53.662.389/0001-05). Taxa informada antes da contratação. Sujeito a aprovação. Valores pagos por TED não entram.</p></div>
 
-<!-- 16/12 · Post 13 Mapa da rede -->
-<div class="art feed" id="16-12_mapa-da-rede"><div class="kick">Um mês de GF</div><div class="tagex">ROTAS DE EXEMPLO</div>
-<h1 class="m">As rotas da rede no <span class="blue">RS.</span></h1>
-<svg class="map" width="912" height="600" data-routes="Alegrete-Uruguaiana;Alegrete-Santa Maria;Santana do Livramento-Rosário do Sul;São Gabriel-Bagé;Santa Maria-Cacequi"></svg>
-<div data-foot></div></div>
+<!-- 16/12 Mapa -->
+<div class="art feed dark" id="16-12_mapa-da-rede" data-lock><span class="ex top">Exemplo</span>
+<div class="kick">Um mês de GF</div><h1 class="m">As rotas da rede no <span class="b">RS.</span></h1>
+<svg class="map" width="904" height="600" data-routes="Alegrete-Uruguaiana;Alegrete-Santa Maria;Santana do Livramento-Rosário do Sul;São Gabriel-Bagé;Santa Maria-Cacequi"></svg></div>
 
-<!-- 21/12 · Post 14 Obrigado, rede -->
-<div class="art feed" id="21-12_obrigado-rede"><div class="kick">Primeiro mês</div>
-<h1>Obrigado, <span class="blue">rede.</span></h1>
-<div class="p">Em um mês, guincheiros de <span class="ph">[cidades]</span> começaram a anunciar a volta e pegar frete no caminho.</div>
-<div class="p"><b>Em 2027 a gente segue com quem roda de guincho no RS.</b></div><div data-foot></div></div>
+<!-- 21/12 -->
+<div class="art feed dark" id="21-12_obrigado-rede" data-photo="socorro-rodovia-cones" data-lock>
+<div class="bottom"><div class="kick">Primeiro mês</div><h1 class="xl">Obrigado, <span class="b">rede.</span></h1>
+<p class="p">Em um mês, guincheiros de <span class="ph">[cidades]</span> começaram a anunciar a volta e pegar frete no caminho. <strong>Conexões que movem.</strong></p></div></div>
 
-<!-- Capas dos Reels 5–8 -->
-<div class="art story" id="27-11_reel5-capa"><div class="kick">Reel · Fundador</div><h1>Primeira semana de <span class="blue">GF.</span></h1><div class="p"><span class="ph">[Nome]</span>, de <span class="ph">[cidade]</span>, conta como foi.</div><div data-foot></div></div>
-<div class="art story" id="04-12_reel6-capa"><div class="kick">Reel · Quanto sobra?</div><h1>Quanto sobrou desse <span class="blue">frete?</span></h1><div class="p">Diesel, pedágio, manutenção e imposto numa conta só.</div><div data-foot></div></div>
-<div class="art story" id="11-12_reel7-capa"><div class="kick">Reel · Do pedido à entrega</div><h1>Carro em Uruguaiana. Dono em <span class="blue">Alegrete.</span></h1><div class="p">Do pedido à entrega, tudo no celular.</div><div data-foot></div></div>
-<div class="art story" id="18-12_reel8-capa"><div class="kick">Reel · Um mês</div><h1>Um mês de <span class="blue">GF.</span></h1>
-<div class="card"><div class="t">Guincheiros</div><div class="r"><span class="ph">[X]</span></div></div><div class="card"><div class="t">Rotas anunciadas</div><div class="r"><span class="ph">[Y]</span></div></div><div class="card"><div class="t">Fretes no caminho</div><div class="r"><span class="ph">[Z]</span></div></div><div data-foot></div></div>
+<!-- Capas dos Reels -->
+<div class="art story dark" id="27-11_reel5-capa" data-photo="pesado-carregado-rodovia" data-lock><div class="bottom"><div class="kick">Reel · Fundador</div><h1>Primeira semana de <span class="b">GF.</span></h1><p class="p"><span class="ph">[Nome]</span>, de <span class="ph">[cidade]</span>, conta como foi.</p></div></div>
+<div class="art story dark" id="04-12_reel6-capa" data-photo="guincho-pesado-caminhao-tanque" data-lock><div class="bottom"><div class="kick">Reel · Quanto sobra?</div><h1>Quanto sobrou desse <span class="b">frete?</span></h1><p class="p">Diesel, pedágio, manutenção e imposto numa conta só.</p></div></div>
+<div class="art story dark" id="11-12_reel7-capa" data-photo="plataforma-carro-entardecer" data-lock><div class="bottom"><div class="kick">Reel · Do pedido à entrega</div><h1>Carro em Uruguaiana. Dono em <span class="b">Alegrete.</span></h1><p class="p">Do pedido à entrega, tudo no celular.</p></div></div>
+<div class="art story dark" id="18-12_reel8-capa" data-photo="socorro-rodovia-cones" data-lock><div class="bottom"><div class="kick">Reel · Um mês</div><h1>Um mês de <span class="b">GF.</span></h1>
+<div class="card"><div class="t">Guincheiros · Rotas · Fretes</div><div class="r"><span class="ph">[X]</span> · <span class="ph">[Y]</span> · <span class="ph">[Z]</span></div></div></div></div>
 
+<script src="artes.js"></script>
 <script>
-const f=document.getElementById('foot').innerHTML;document.querySelectorAll('[data-foot]').forEach(e=>e.outerHTML=f);
 const C={"Alegrete":[-55.79,-29.78],"Uruguaiana":[-57.09,-29.75],"Rosário do Sul":[-54.91,-30.26],"São Gabriel":[-54.32,-30.34],"Santa Maria":[-53.81,-29.69],"Bagé":[-54.10,-31.33],"Cacequi":[-54.82,-29.88],"Santana do Livramento":[-55.53,-30.89],"Quaraí":[-56.45,-30.39],"São Borja":[-56.00,-28.66],"Itaqui":[-56.55,-29.13],"Dom Pedrito":[-54.67,-30.98]};
 const L={'Santa Maria':[-18,-18,'end'],'Cacequi':[0,40,'middle'],'Rosário do Sul':[-18,10,'end'],'São Gabriel':[18,10,'start'],'Bagé':[18,10,'start'],'Uruguaiana':[0,-22,'middle'],'Alegrete':[0,-22,'middle'],'Santana do Livramento':[-18,10,'end']};
 document.querySelectorAll('svg.map').forEach(s=>{
  const W=+s.getAttribute('width'),H=+s.getAttribute('height');
  const P=([lo,la])=>[70+(lo+57.2)/3.5*(W-260),50+(-28.5-la)/3.0*(H-100)];
  const ns='http://www.w3.org/2000/svg',el=(t,a)=>{const e=document.createElementNS(ns,t);for(const k in a)e.setAttribute(k,a[k]);s.appendChild(e);return e};
- el('rect',{x:0,y:0,width:W,height:H,rx:32,fill:'#0f2340',stroke:'#24477a','stroke-width':2});
+ el('rect',{x:0,y:0,width:W,height:H,rx:32,fill:'#0f1d33',stroke:'#1f3a5f','stroke-width':2});
  const used=new Set();
  s.dataset.routes.split(';').forEach(r=>{const [a,b]=r.split('-').map(x=>x.trim());used.add(a);used.add(b);const [x1,y1]=P(C[a]),[x2,y2]=P(C[b]);
-  el('line',{x1,y1,x2,y2,stroke:'#2a86ff','stroke-width':10,'stroke-linecap':'round',opacity:.9});
+  el('line',{x1,y1,x2,y2,stroke:'#2a8cff','stroke-width':10,'stroke-linecap':'round'});
   el('line',{x1,y1,x2,y2,stroke:'#dfe6ef','stroke-width':3,'stroke-dasharray':'14 12',opacity:.7});});
  Object.entries(C).forEach(([n,c])=>{const [x,y]=P(c),u=used.has(n);
   el('circle',{cx:x,cy:y,r:u?13:7,fill:u?'#fff':'#4a6383'});

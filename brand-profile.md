@@ -90,7 +90,7 @@
   - numeração "4/7" no canto inferior esquerdo e seta "→" no direito;
   - selo "Exemplo" em âmbar para dados fictícios; verde só para resultado positivo (sobra).
   - Site: fotos noturnas de estrada e caminhão-plataforma, rotas em linhas azuis com pinos.
-- **Pontos a alinhar [A CONFIRMAR]:** assinatura ("Conexões que movem" no site × "Conectando quem transporta" no slide 04/09); logo (prata/azul × "GF" branco liso no site); mapa do Brasil inteiro no site enquanto o lançamento é só no RS; fotos geradas por IA devem ser identificadas ou trocadas por fotos reais.
+- **Decidido em 04/11:** assinatura principal "Conexões que movem" e descritor "Conectando quem transporta" (junto do logo); logo oficial é o GF prata/azul; artes e legendas falam só de Guincho Fácil (sem citar JM); fotos reais da frota usadas sem desfoque (decisão do dono), incluindo viatura da PRF e caminhão dos Correios. Pendente: mapa do Brasil no site × lançamento só no RS.
 
 ## Limites
 - **Antecipação (financeiro):** sempre deixar claro que análise, taxa e pagamento são da JK Invest; "sujeito a aprovação"; taxa caso a caso, informada antes; nunca prometer aprovação nem taxa específica. [Revisar textos com a JK Invest antes de anúncios pagos]

@@ -1,54 +1,105 @@
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#222;padding:20px;display:flex;flex-direction:column;gap:20px;font-family:Inter,sans-serif}
+.art{position:relative;overflow:hidden;padding:96px 88px 120px}
+.feed{width:1080px;height:1350px}
+.story{width:1080px;height:1920px;padding:210px 88px 260px}
+.sq{width:1080px;height:1080px;padding:0;display:flex;align-items:center;justify-content:center}
 
-*{box-sizing:border-box;margin:0}
-body{background:#222;padding:20px;display:flex;flex-direction:column;gap:20px;font-family:Inter,sans-serif;color:#fff}
-.art{position:relative;overflow:hidden;background:radial-gradient(120% 80% at 85% 0%,#14315a 0%,#0a1524 55%);padding:90px 84px}
-.feed{width:1080px;height:1350px}.story{width:1080px;height:1920px;padding:200px 84px 260px}.sq{width:1080px;height:1080px}
-.kick{font:600 26px "JetBrains Mono";letter-spacing:.14em;color:#2a86ff;text-transform:uppercase}
-.count{position:absolute;top:90px;right:84px;font:600 26px "JetBrains Mono";color:#6f86a3}
-.story .count{top:200px}
-h1{font:900 128px/0.98 "Inter Display";letter-spacing:-.035em;margin-top:40px}
-h1.m{font-size:104px}h1.s{font-size:84px}
-.blue{color:#2a86ff}.gold{color:#2a86ff}
-.p{font:500 44px/1.35 Inter;color:#c9d6e6;margin-top:36px;max-width:880px}
-.p b{color:#fff;font-weight:800}
-.q{font:800 64px/1.1 "Inter Display";letter-spacing:-.02em;margin-top:56px}
-.a{font:500 42px/1.4 Inter;color:#c9d6e6;margin-top:22px;max-width:900px}
-.list{margin-top:48px;display:flex;flex-direction:column;gap:26px}
-.li{display:flex;gap:26px;align-items:flex-start;font:600 46px/1.25 Inter}
-.li i{flex:none;width:58px;height:58px;border-radius:16px;background:#2a86ff;color:#0a1524;font:900 32px/58px "Inter Display";text-align:center;font-style:normal}
-.road{position:absolute;left:0;right:0;bottom:190px;height:10px;background:repeating-linear-gradient(90deg,#dfe6ef 0 90px,transparent 90px 150px);opacity:.55}
-.story .road{bottom:260px}
-.foot{position:absolute;left:84px;right:84px;bottom:70px;display:flex;justify-content:space-between;align-items:center}
-.story .foot{bottom:120px}
-.logo{display:flex;align-items:center;gap:20px}
-.logo img{height:72px;filter:drop-shadow(0 0 18px #1f7bff66)}
-.logo span{font:700 30px/1.15 Inter}.logo small{display:block;font:500 22px "JetBrains Mono";color:#8ea3bd;letter-spacing:.06em}
-.url{font:600 30px "JetBrains Mono";color:#fff;background:#13284a;border:2px solid #24477a;border-radius:16px;padding:16px 22px}
-.big{font:900 360px/0.85 "Inter Display";letter-spacing:-.06em;color:#2a86ff;margin-top:70px}
-.pill{display:inline-block;margin-top:40px;font:700 34px Inter;background:#2a86ff;color:#fff;border-radius:999px;padding:20px 36px}
-.card{margin-top:44px;background:#0f2340;border:2px solid #24477a;border-radius:28px;padding:36px 40px}
-.card .t{font:600 26px "JetBrains Mono";color:#8ea3bd;letter-spacing:.08em;text-transform:uppercase}
-.card .r{font:800 58px/1.1 "Inter Display";margin-top:10px}
-.swipe{position:absolute;right:84px;bottom:210px;font:700 34px Inter;color:#2a86ff}
-.badge{width:760px;height:760px;border-radius:50%;margin:70px auto 0;border:14px solid #c9d3df;display:flex;flex-direction:column;align-items:center;justify-content:center;background:radial-gradient(circle,#14315a,#0a1524);box-shadow:0 0 0 22px #0a1524,0 0 0 26px #2a86ff66}
-.badge .g{width:440px;filter:drop-shadow(0 0 30px #1f7bff88)}
-.badge .f{font:900 92px "Inter Display";letter-spacing:.04em;margin-top:36px;color:#fff}
-.badge .d{font:600 30px "JetBrains Mono";color:#c9d6e6;letter-spacing:.14em;margin-top:8px}
-.sq{padding:0;display:flex;align-items:center;justify-content:center}
-.sq .badge{margin:0}
+/* temas */
+.dark{color:#fff;background:radial-gradient(110% 70% at 85% 0%,#10284d 0%,#081428 50%,#050b17 100%)}
+.light{color:#0d1b33;background:repeating-linear-gradient(135deg,rgba(13,27,51,.035) 0 2px,transparent 2px 38px),linear-gradient(180deg,#f3f7fc,#e2ebf6)}
+.bgimg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.shade{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(5,11,23,.94) 0%,rgba(5,11,23,.78) 34%,rgba(5,11,23,.15) 62%,rgba(5,11,23,.55) 84%,rgba(5,11,23,.92) 100%)}
+.shade.sb{background:linear-gradient(180deg,rgba(5,11,23,.55) 0%,rgba(5,11,23,.05) 30%,rgba(5,11,23,.6) 52%,rgba(5,11,23,.96) 72%,#050b17 100%)}
+.brand,.kick,h1,.p,.checks,.steps,.card,.photo-card,.stepn,.route,svg.map,.half,.bignum,.small,.pill{position:relative;z-index:2}
 
-.ph{outline:3px dashed #ff5fa2;outline-offset:4px;border-radius:6px;color:#ffd1e4}
-.phone{position:absolute;right:84px;bottom:240px;width:400px;height:760px;border-radius:56px;border:10px solid #c9d3df;background:#0f2340;display:flex;align-items:center;justify-content:center;text-align:center;padding:40px;box-shadow:0 0 60px #2a86ff44}
+/* marca */
+.brand{display:flex;align-items:center;gap:26px}
+.brand img{height:62px;filter:drop-shadow(0 0 16px rgba(42,140,255,.45))}
+.light .brand .chip{background:#0b1830;border-radius:22px;padding:16px 22px;display:flex}
+.light .brand img{height:44px;filter:none}
+.lock b{display:block;font:800 34px/1 Inter;letter-spacing:.06em}
+.lock small{display:block;font:700 19px/1 Inter;letter-spacing:.16em;margin-top:9px;opacity:.85}
+
+/* texto */
+.kick{margin-top:70px;font:800 29px/1 Inter;letter-spacing:.15em;text-transform:uppercase;color:#2f8fff}
+.light .kick{color:#1f6fbf}
+h1{margin-top:24px;font:900 112px/.98 "Inter Display";letter-spacing:-.045em}
+h1.m{font-size:96px}h1.s{font-size:80px}h1.xl{font-size:150px}
+.b{color:#2a8cff}
+.p{margin-top:34px;font:500 42px/1.38 Inter;color:#b9c6d8;max-width:900px}
+.light .p{color:#4a5a72}
+.p strong{color:#fff;font-weight:700}.light .p strong{color:#0d1b33}
+.small{font:500 28px/1.4 Inter;color:#8a98ad;margin-top:26px}
+.light .small{color:#5d6b80}
+
+/* listas */
+.checks{list-style:none;margin-top:52px;display:flex;flex-direction:column;gap:36px}
+.checks li{display:flex;gap:26px;font:500 40px/1.32 Inter;color:#b9c6d8}
+.light .checks li{color:#4a5a72}
+.checks li strong{color:#fff;font-weight:700}.light .checks li strong{color:#0d1b33}
+.checks li:before{content:"";flex:none;width:46px;height:46px;margin-top:2px;border-radius:50%;background:#2a8cff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 12.5l4 4 8-9' fill='none' stroke='%230a1a33' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/30px no-repeat}
+.steps{display:flex;flex-direction:column;gap:24px;margin-top:56px}
+.step{display:flex;gap:28px;align-items:flex-start;border-radius:30px;padding:38px 40px}
+.light .step{background:#fff;border:2px solid #dfe7f1}
+.dark .step{background:#0f1d33;border:2px solid #1f3a5f}
+.step i{flex:none;width:84px;height:84px;border-radius:50%;font:900 42px/84px "Inter Display";text-align:center;font-style:normal}
+.light .step i{background:#0b1830;color:#fff}.dark .step i{background:#2a8cff;color:#0a1a33}
+.step b{display:block;font:800 46px/1.1 "Inter Display";letter-spacing:-.02em}
+.step span{display:block;margin-top:8px;font:500 34px/1.35 Inter;color:#5d6b80}.dark .step span{color:#9fb0c6}
+
+/* cartões e números */
+.card{margin-top:44px;border-radius:32px;padding:40px 44px}
+.light .card{background:#fff;border:2px solid #dfe7f1}
+.dark .card{background:#0f1d33;border:2px solid #1f3a5f}
+.card .t{font:800 26px/1 Inter;letter-spacing:.14em;text-transform:uppercase;color:#1f6fbf}.dark .card .t{color:#2f8fff}
+.card .r{font:900 64px/1.1 "Inter Display";letter-spacing:-.02em;margin-top:14px}
+.row{display:flex;justify-content:space-between;align-items:baseline;padding:24px 0;border-bottom:2px solid #e6edf5;font:500 40px Inter}
+.dark .row{border-color:#1f3a5f}
+.row:last-child{border:0}
+.row b{font:800 44px Inter}
+.result{margin-top:26px;border-radius:26px;padding:34px 38px;background:#e3f3ea;border:3px solid #1d7a4a}
+.result b{display:block;font:900 84px/1 "Inter Display";color:#11683c;letter-spacing:-.03em}
+.result span{display:block;margin-top:12px;font:500 34px Inter;color:#2b4a3a}
+.bignum{font:900 420px/.82 "Inter Display";letter-spacing:-.06em;color:#2a8cff;margin-top:60px}
+.stepn{font:900 210px/.85 "Inter Display";color:#2a8cff;letter-spacing:-.05em;margin-top:50px}
+
+/* botões */
+.btns{position:absolute;left:88px;right:88px;bottom:190px;display:flex;flex-direction:column;gap:22px;z-index:2}
+.story .btns{bottom:300px}
+.btn{display:block;text-align:center;border-radius:26px;padding:30px;font:800 46px Inter;background:#2a8cff;color:#0a1a33}
+.btn.o{background:transparent;border:3px solid #2a8cff;color:#fff}
+.light .btn.o{color:#0d1b33}
+.pill{display:inline-block;margin-top:44px;border-radius:999px;padding:18px 34px;font:800 34px Inter;background:#2a8cff;color:#0a1a33}
+.ex{display:inline-block;border-radius:999px;padding:10px 22px;font:800 28px Inter;background:#3a2f12;color:#f2c14e}
+.light .ex{background:#fbefd0;color:#8a6410}
+.ex.top{position:absolute;top:104px;right:88px;z-index:3}
+.story .ex.top{top:218px}
+
+/* rodapé */
+.count{position:absolute;left:88px;bottom:92px;font:600 34px Inter;color:#7d8ba1;z-index:2}
+.arrow{position:absolute;right:88px;bottom:88px;font:600 40px Inter;color:#2a8cff;z-index:2}
+
+/* app / mapa */
+.phone{position:absolute;right:88px;bottom:250px;width:400px;height:760px;border-radius:58px;border:10px solid #c9d3df;background:#0f1d33;display:flex;align-items:center;justify-content:center;text-align:center;padding:40px;box-shadow:0 30px 80px rgba(13,27,51,.35)}
 .phone span{font:600 30px/1.35 Inter;color:#ffd1e4;outline:3px dashed #ff5fa2;outline-offset:14px;border-radius:8px}
-.stepn{font:900 200px/0.9 "Inter Display";color:#2a86ff;letter-spacing:-.05em;margin-top:60px}
-.half{max-width:520px}
-.calc{margin-top:40px;display:flex;flex-direction:column;gap:18px}
-.calc .row{display:flex;justify-content:space-between;align-items:baseline;background:#0f2340;border:2px solid #24477a;border-radius:22px;padding:26px 34px;font:600 40px Inter}
-.calc .row b{font:900 60px "Inter Display"}
-.tagex{position:absolute;top:90px;right:84px;font:700 24px "JetBrains Mono";color:#ffd1e4;outline:3px dashed #ff5fa2;padding:6px 12px;border-radius:6px}
-.disc{font:500 28px/1.4 Inter;color:#8ea3bd;margin-top:30px;max-width:900px}
-.route{margin-top:50px;background:#0f2340;border:2px solid #24477a;border-radius:32px;padding:44px}
+.half{max-width:460px}
+.ph{outline:3px dashed #ff5fa2;outline-offset:4px;border-radius:6px}
+.route{margin-top:50px;border-radius:32px;padding:44px}
+.dark .route{background:#0f1d33;border:2px solid #1f3a5f}
 .route .c{font:900 76px/1.05 "Inter Display";letter-spacing:-.02em}
-.route .c i{font-style:normal;color:#2a86ff}
-.route .m{font:600 34px "JetBrains Mono";color:#c9d6e6;margin-top:20px}
-svg.map{display:block;margin-top:30px}
+.route .c i{font-style:normal;color:#2a8cff}
+.route .m{font:500 36px Inter;color:#9fb0c6;margin-top:18px}
+svg.map{display:block;margin-top:40px}
+
+/* selo */
+.badge{width:760px;height:760px;border-radius:50%;border:14px solid #c9d3df;display:flex;flex-direction:column;align-items:center;justify-content:center;background:radial-gradient(circle,#14315a,#0a1524);box-shadow:0 0 0 22px #0a1524,0 0 0 26px rgba(42,134,255,.4)}
+.badge img{width:440px;filter:drop-shadow(0 0 30px rgba(31,123,255,.55))}
+.badge .f{font:900 92px "Inter Display";letter-spacing:.04em;margin-top:36px;color:#fff}
+.badge .d{font:700 30px Inter;color:#c9d6e6;letter-spacing:.16em;margin-top:8px}
+.photo-card{margin-top:44px;height:460px;border-radius:32px;overflow:hidden;border:2px solid #1f3a5f}
+.photo-card img{width:100%;height:100%;object-fit:cover;display:block}
+.bottom{position:absolute;left:88px;right:88px;bottom:200px;z-index:2}
+.story .bottom{bottom:300px}
+.bottom.withbtn{bottom:520px}
+.story .bottom.withbtn{bottom:640px}
