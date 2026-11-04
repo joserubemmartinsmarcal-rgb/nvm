@@ -103,3 +103,5 @@ svg.map{display:block;margin-top:40px}
 .story .bottom{bottom:300px}
 .bottom.withbtn{bottom:520px}
 .story .bottom.withbtn{bottom:640px}
+.shot{position:relative;z-index:2;margin-top:44px;height:640px;border-radius:30px;overflow:hidden;border:3px solid #0b1830;box-shadow:0 30px 80px rgba(13,27,51,.28);background:#0b1830}
+.shot img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
