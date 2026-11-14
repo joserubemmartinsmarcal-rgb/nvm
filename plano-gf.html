@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GF · Plano de conteúdo: ajustes, artes e pós-lançamento</title>
+<style>
+  :root{--bg:#0a1524;--card:#0f1f33;--line:#1d3350;--txt:#e6edf6;--mut:#8ea3bd;--blue:#3b9cff;--gold:#2a86ff;--green:#3fbf8a;--pink:#c58cff;--red:#ff8a5c}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--txt);font:15px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+  .wrap{max-width:820px;margin:0 auto;padding:28px 18px 80px}
+  .kicker{font:12px ui-monospace,monospace;letter-spacing:.12em;color:var(--blue);text-transform:uppercase}
+  h1{font-size:38px;line-height:1.05;margin:10px 0 12px;letter-spacing:-.02em}
+  h1 span{color:var(--blue)}
+  .lead{color:var(--mut);max-width:560px}
+  .meta{font:13px ui-monospace,monospace;color:var(--mut);margin:14px 0 18px}
+  .meta b{color:var(--txt);font-weight:600}
+  .bar{display:flex;align-items:center;gap:12px;font:12px ui-monospace,monospace;color:var(--mut)}
+  .bar div{flex:1;height:6px;background:var(--line);border-radius:4px;overflow:hidden}
+  .bar i{display:block;height:100%;background:var(--blue);width:0}
+  .tabs{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0;padding-bottom:16px;border-bottom:1px solid var(--line)}
+  .tabs button{background:var(--card);color:var(--txt);border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-weight:600;cursor:pointer}
+  .tabs button.on{background:var(--blue);border-color:var(--blue)}
+  .part{font:12px ui-monospace,monospace;color:var(--mut);letter-spacing:.1em;margin:34px 0 4px;text-transform:uppercase}
+  h2{margin:0 0 6px;font-size:26px}
+  .sub{color:var(--mut);margin:0 0 14px;max-width:600px}
+  .box{border:1px solid var(--line);border-left:3px solid var(--green);border-radius:12px;padding:12px 16px;margin:12px 0;background:#0d1b2d}
+  .box h4{margin:0 0 6px;font:12px ui-monospace,monospace;color:var(--green);letter-spacing:.1em;text-transform:uppercase}
+  .box ul{margin:0;padding-left:18px}
+  .day{background:var(--card);border:1px solid var(--line);border-radius:16px;margin:12px 0;overflow:hidden}
+  .day.done{opacity:.55}
+  .hd{display:flex;gap:14px;align-items:center;padding:14px 16px;border-bottom:1px solid var(--line)}
+  .date{background:#0b192b;border-radius:10px;padding:6px 10px;text-align:center;min-width:52px}
+  .date b{display:block;font-size:20px}
+  .date small{font:10px ui-monospace,monospace;color:var(--mut);text-transform:uppercase}
+  .ttl{flex:1}
+  .ttl b{font-size:16px}
+  .tag{display:inline-block;font:10px ui-monospace,monospace;letter-spacing:.08em;padding:2px 7px;border-radius:5px;margin:4px 4px 0 0;background:#132a45;color:var(--blue);text-transform:uppercase}
+  .tag.reel{color:var(--red)} .tag.st{color:var(--pink)} .tag.art{color:var(--gold)} .tag.chg{color:var(--green)}
+  label.ck{font-size:13px;color:var(--mut);display:flex;gap:6px;align-items:center;cursor:pointer}
+  .sec{padding:12px 16px;border-top:1px solid var(--line)}
+  .sec:first-of-type{border-top:0}
+  .lbl{display:flex;justify-content:space-between;align-items:center;font:11px ui-monospace,monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);margin-bottom:8px}
+  .lbl.reel{color:var(--red)} .lbl.st{color:var(--pink)} .lbl.art{color:var(--gold)}
+  .lbl button{font:600 12px system-ui;background:#0b192b;color:var(--txt);border:1px solid var(--line);border-radius:8px;padding:5px 10px;cursor:pointer}
+  .what{font-size:13px;margin:0 0 8px}
+  .what b{font-weight:700}
+  pre{white-space:pre-wrap;background:#081322;border:1px solid var(--line);border-radius:10px;padding:12px 14px;margin:0;font:13px/1.55 ui-monospace,Menlo,monospace;color:#dfe8f3}
+  ol.n{list-style:none;margin:0;padding:0;counter-reset:n}
+  ol.n li{counter-increment:n;display:flex;gap:10px;margin:4px 0;font-size:14px}
+  ol.n li:before{content:counter(n);font:11px ui-monospace,monospace;color:var(--mut);background:#0b192b;border-radius:5px;min-width:22px;text-align:center;padding-top:2px}
+  .note{color:var(--gold);font-size:13px;margin-top:8px}
+  .chg{color:var(--green);font-size:13px;margin-top:8px}
+  .slides{display:grid;gap:8px}
+  .slide{background:#081322;border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+  .slide small{font:11px ui-monospace,monospace;color:var(--gold)}
+  .slide p{margin:4px 0 0;white-space:pre-wrap}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px;margin-top:12px}
+  .grid .box{border-left-color:var(--blue);margin:0}
+  .grid .box h4{color:var(--txt);font:700 15px system-ui;text-transform:none;letter-spacing:0}
+  .hide{display:none}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="kicker">GF · Conexões que movem</div>
+  <h1>Ajustes, artes e <span>pós-lançamento</span></h1>
+  <p class="lead">Continuação do “Aquecimento de lançamento: 4 semanas”. (A) legendas revisadas de 02/11 a 23/11, (B) textos das artes novas, (C) as 4 semanas depois do lançamento, no mesmo formato.</p>
+  <div class="meta">Lançamento <b>seg 23/11, 8h</b> · Link na bio <b>appdoguincheiro.com</b> · Pós-lançamento <b>24/11 a 21/12</b></div>
+  <div class="bar"><div><i id="prog"></i></div><span id="progt">0 feitos</span></div>
+  <div class="tabs" id="tabs"></div>
+  <div id="app"></div>
+</div>
+
+<script>
+const H = "#guincheiro #retornovazio #frete #fronteiraoeste #ConexoesQueMovem";
+const HC = "#transportedeveiculos #guincho #frete #fronteiraoeste #ConexoesQueMovem";
+const LISTA = "Lista de espera no link da bio: appdoguincheiro.com";
+
+const PARTS = [
+{ id:"A", tab:"A · Legendas 02–23/11", part:"Parte A · 02/11 a 23/11", title:"Legendas revisadas",
+  sub:"Só os posts de feed e reels. Os stories continuam como no plano original. Em verde, o que mudou e por quê.",
+  boxes:[{h:"Regras aplicadas em todas", li:[
+    "5 hashtags em vez de 13: o Instagram vem limitando e recomendando poucas por post. Bloco padrão: "+H,
+    "“Você” no feed, “tu” só nos stories (como já está no plano).",
+    "Saem frases genéricas (“Mais rotas. Mais ganhos.”, “Simples, rápido e sem complicação”) e entra custo concreto: diesel, km, hora parada.",
+    "Só se promete o que o site já diz: grátis nesta fase, guincheiros conferidos, preço do guincheiro, WhatsApp só depois do aceite."]}],
+  days:[
+  {d:"02",w:"seg",t:"Primeira vez com o link",tags:["feed"],
+   feed:{what:"<b>Post 04</b> · Chega de retornos vazios (1 foto)",cap:
+`Entregou o carro. E a volta?
+
+Todo guincheiro conhece: a volta vazia é diesel, pneu e hora parada saindo do seu bolso.
+
+O GF vai conectar a sua volta com quem precisa transportar um veículo no mesmo caminho.
+
+Quem entra na lista agora fica sabendo antes de todo mundo.
+${LISTA}
+
+GF · Conexões que movem.
+${H}`},
+   chg:"Troquei “Mais rotas. Mais ganhos. Mais movimento.” por um custo que o guincheiro sente no bolso."},
+  {d:"04",w:"qua",t:"Divulga tua rota",tags:["feed"],
+   feed:{what:"<b>Post 03</b> · Vai voltar vazio? (carrossel de 5)",cap:
+`Vai voltar vazio? Anuncie sua rota e veja os fretes no mesmo caminho.
+
+No GF, quem tem guincho na estrada e quem precisa transportar um veículo se encontram: carro, moto, utilitário ou caminhão.
+
+Você diz de onde sai, para onde volta e quando.
+O GF mostra os pedidos que cabem na rota e quantos km cada um desvia.
+Você decide o preço e aceita só o que quiser.
+
+Começando pela Fronteira Oeste e região central do RS.
+${LISTA}
+
+GF · Conexões que movem.
+${H}`},
+   chg:"Saiu “Simples, rápido e sem complicação”; entrou como funciona de verdade (km de desvio, preço seu). “Máquinas” virou “caminhão”, como no site."},
+  {d:"06",w:"sex",t:"Como vai funcionar",tags:["feed"],
+   feed:{what:"<b>Post 05</b> · Como vai funcionar (3 fotos)",cap:
+`Ida com chamado. Volta com frete.
+
+Como vai funcionar:
+1. Anuncie seu retorno: de onde sai, para onde volta, quando e com que equipamento.
+2. Veja os pedidos que cabem na rota, com o desvio em km.
+3. Mande sua proposta e combine direto com o cliente.
+
+O preço é seu. O GF não fica com parte do valor.
+
+${LISTA}
+GF · Conexões que movem.
+${H}`},
+   chg:"Cada passo ficou concreto. Entrou “o GF não fica com parte do valor”, que é a objeção nº 1 do guincheiro.",
+   note:"Confirme que “não fica com parte do valor” continua valendo depois do lançamento antes de postar."},
+  {d:"07",w:"sáb",t:"Reel 2: ida com chamado, volta com frete",tags:["reel"],
+   feed:{reel:true,what:"<b>Reel 2</b> · Estrada + gravação de tela do protótipo",cap:
+`Ida com chamado. Volta com frete.
+
+Anuncie por onde você volta e veja o que cabe no caminho. Isto é uma prévia do GF, com pedidos de exemplo.
+
+${LISTA}
+${H}`},
+   chg:"Entrou “com pedidos de exemplo”: o protótipo usa dados fictícios e a legenda precisa dizer isso, não só o selo na tela."},
+  {d:"09",w:"seg",t:"A comunidade de parceiros",tags:["feed"],
+   feed:{what:"<b>Post 06</b> · Comunidade de Parceiros (9 fotos), collab com @jmtransportes.me",cap:
+`Mais que transporte. É parceria.
+
+O GF está montando a Comunidade de Parceiros: guincheiros que compartilham rotas, repassam serviço e não deixam cliente sem atendimento.
+
+Para guincheiros: anuncie sua rota, pegue frete na volta e encontre parceiros de confiança.
+Para quem precisa transportar um veículo: receba propostas de guincheiros conferidos que já vão passar pelo caminho.
+
+${LISTA}
+GF · Conexões que movem.
+#guincheiro #frete #transportedeveiculos #riograndedosul #ConexoesQueMovem`},
+   chg:"“Guincheiros qualificados” virou “conferidos” (é o que o site garante). Saiu “reduza o tempo de espera”, porque ainda não há dado para provar.",
+   note:"Collab com a JM: a JM aparece como parceira, sem números ou frota da JM como prova do GF."},
+  {d:"11",w:"qua",t:"Fundadores GF",tags:["feed","arte nova"],
+   feed:{what:"<b>Arte nova</b> · Fundadores GF (texto da arte na Parte B)",cap:
+`Fundadores GF.
+
+Os primeiros guincheiros da lista entram no GF como Fundadores:
+· Selo de Fundador no seu perfil, para todo mundo ver que você está desde o começo
+· Prioridade nos pedidos da sua rota por 3 meses (23/11 a 23/02): você vê antes dos outros
+
+Para entrar: lista de espera no link da bio. Conte a rota que você mais faz e o equipamento que tem.
+Vagas de Fundador até 22/11.
+
+Guincheiro ajuda guincheiro. Começa com quem chega primeiro.
+appdoguincheiro.com
+${H}`},
+   chg:"As datas da prioridade (23/11 a 23/02) e o prazo (22/11) estão na legenda, para evitar dúvida no direct.",
+   note:"Só poste se o app já vai entregar o selo e a prioridade no dia 23. Promessa de benefício que não acontece queima a rede logo no começo."},
+  {d:"13",w:"sex",t:"Reel 3: guincheiro ajuda guincheiro",tags:["reel"],
+   feed:{reel:true,what:"<b>Reel 3</b> · Cena de repasse entre dois guincheiros",cap:
+`Guincheiro ajuda guincheiro.
+
+Chamado longe demais? Repasse para quem está no caminho. Cliente atendido, colega trabalhando, ninguém voltando vazio.
+
+É isso que o GF vai conectar.
+${LISTA}
+${H}`},
+   chg:"Legenda mantida, só ajustes de português (“tá” → “está”) e hashtags.",
+   note:"A cena é encenada. Não apresente como caso real que aconteceu."},
+  {d:"16",w:"seg",t:"Faltam 7 dias",tags:["feed","arte nova"],
+   feed:{what:"<b>Arte nova</b> · Faltam 7 dias (texto da arte na Parte B)",cap:
+`Faltam 7 dias.
+
+Segunda, 23/11, o GF abre para os guincheiros do Rio Grande do Sul.
+Anuncie seu retorno. Encontre frete no caminho. Pare de voltar vazio.
+
+Ainda dá tempo de entrar como Fundador: selo no perfil e 3 meses de prioridade nos pedidos da sua rota. Vagas até domingo, 22/11.
+${LISTA}
+${H}`},
+   chg:"Entrou o prazo exato das vagas de Fundador."},
+  {d:"18",w:"qua",t:"Perguntas frequentes",tags:["feed","arte nova"],
+   feed:{what:"<b>Arte nova</b> · Carrossel de perguntas (5 telas, texto na Parte B)",cap:
+`As perguntas que mais chegaram sobre o GF.
+
+Arrasta pro lado: quanto custa, se o GF fica com parte do frete, se precisa baixar na loja, se o seu WhatsApp fica exposto e onde funciona.
+
+Ficou dúvida? Chama no direct.
+Lançamento segunda, 23/11. ${LISTA}
+${H}`},
+   chg:"A legenda agora diz o que tem no carrossel, para dar motivo de arrastar."},
+  {d:"20",w:"sex",t:"Reel 4: a rede já está se formando",tags:["reel"],
+   feed:{reel:true,what:"<b>Reel 4</b> · Mapa de rotas e números da lista",cap:
+`A rede já está se formando.
+
+[X] guincheiros de [Y] cidades do RS já entraram na lista do GF. Segunda, 23/11, a gente abre.
+
+Último fim de semana para entrar como Fundador.
+${LISTA}
+${H}`},
+   chg:"“Vários” virou número real, que convence mais.",
+   note:"Troque [X] e [Y] pelos números reais da semana. Se ainda forem poucos, liste as cidades em vez do total."},
+  {d:"23",w:"seg",t:"Lançamento",tags:["feed","arte nova"],
+   feed:{what:"<b>Arte nova</b> · Lançamento (carrossel de 4 telas, texto na Parte B)",cap:
+`Chegou o GF.
+
+A partir de hoje, guincheiro do Rio Grande do Sul pode anunciar o retorno e encontrar frete no mesmo caminho.
+
+1. Entre em appdoguincheiro.com (link na bio)
+2. Anuncie por onde você volta
+3. Veja os pedidos que cabem na rota e mande sua proposta
+
+Fundadores: obrigado por chegarem primeiro. O selo e a prioridade de 3 meses já estão valendo.
+
+Ida com chamado. Volta com frete.
+GF · Conexões que movem.
+${H}`},
+   chg:"Entrou o agradecimento aos Fundadores no feed, não só nos stories da noite.",
+   note:"Se no dia 23 o cadastro for manual pelo WhatsApp (decisão de 16/11), troque o passo 1 por “Mande sua rota no WhatsApp [número] que a gente cadastra”."}
+  ]},
+
+{ id:"B", tab:"B · Artes novas", part:"Parte B · Artes", title:"Texto das artes novas",
+  sub:"Tudo o que o checklist “Para ter pronto antes” pede de arte, tela por tela.",
+  days:[
+  {d:"11",w:"qua",t:"Fundadores GF + selo",tags:["arte nova"],
+   slides:[["Feed","FUNDADORES GF\nOs primeiros da lista entram primeiro.\n\n· Selo de Fundador no perfil\n· 3 meses de prioridade nos pedidos da sua rota\n\nVagas até 22/11 · appdoguincheiro.com"],
+           ["Selo (para o perfil)","FUNDADOR · GF\ndesde 2026"],
+           ["Story","Tu é Fundador?\nSelo no perfil + 3 meses vendo os pedidos da tua rota antes.\n[figurinha de link: Entrar na lista]"]]},
+  {d:"14 e 20",w:"sáb/sex",t:"Mapa de rotas da rede (story)",tags:["arte nova","st"],
+   slides:[["Story","ROTAS QUE JÁ ESTÃO NA REDE\n[mapa do RS com as linhas: só rotas reais citadas na caixinha e no formulário]\n\nTua rota não tá aqui? Entra na lista e conta.\n[figurinha de link]"]],
+   note:"Atualizar em 14/11 e 20/11. Nada de rota inventada para encher o mapa."},
+  {d:"16",w:"seg",t:"Faltam 7 dias (feed 4:5)",tags:["arte nova"],
+   slides:[["Feed","FALTAM 7 DIAS\n\nSegunda, 23/11\nO GF abre para os guincheiros do RS.\n\nIda com chamado. Volta com frete.\nappdoguincheiro.com"]]},
+  {d:"18",w:"qua",t:"Carrossel de perguntas frequentes (5 telas)",tags:["arte nova"],
+   slides:[["Tela 1 · capa","PERGUNTAS SOBRE O GF\nAs que mais chegaram na caixinha.\nArrasta →"],
+           ["Tela 2","Quanto custa?\nNesta fase, nada. O GF é gratuito para guincheiros e para quem precisa transportar um veículo.\n\nO GF fica com parte do frete?\nNão. O preço é seu e o acerto é direto com o cliente."],
+           ["Tela 3","Preciso baixar na loja?\nNão. Abra appdoguincheiro.com no celular e toque em “Instalar” (Android) ou em Compartilhar › Adicionar à Tela de Início (iPhone)."],
+           ["Tela 4","Meu WhatsApp fica exposto?\nNão. Ele só aparece para a outra parte depois que uma proposta é aceita.\n\nE quem garante o guincheiro?\nTodo guincheiro passa pela conferência da equipe GF, e o cliente avalia depois de cada serviço."],
+           ["Tela 5","Onde funciona?\nComeçando pela Fronteira Oeste e região central do RS: Alegrete, Uruguaiana, Rosário do Sul, São Gabriel, Santa Maria, Bagé e arredores.\n\nLançamento 23/11 · appdoguincheiro.com"]],
+   note:"Respostas tiradas do site. Se a caixinha de 08/11 trouxer outras perguntas, troque, mas só responda o que já está decidido. A tela 3 depende da decisão de 16/11 (app pronto ou manual)."},
+  {d:"23",w:"seg",t:"Lançamento (carrossel de 4 telas)",tags:["arte nova"],
+   slides:[["Tela 1","CHEGOU O GF.\nIda com chamado. Volta com frete.\n[logo GF]"],
+           ["Tela 2","1 · Anuncie seu retorno\nDe onde sai, para onde volta, quando e com que equipamento."],
+           ["Tela 3","2 · Veja os pedidos na sua rota\nCada pedido mostra quantos km desvia. Você aceita só o que quiser."],
+           ["Tela 4","3 · Mande sua proposta\nO preço é seu. Combine direto com o cliente.\n\nComece agora: appdoguincheiro.com\nFundadores: o selo e a prioridade já estão valendo."]],
+   note:"Versão manual (se for pelo WhatsApp): Tela 2 vira “1 · Mande sua rota no WhatsApp [número]” e Tela 4 vira “3 · A gente te avisa dos pedidos que cabem no caminho”."}
+  ]},
+
+{ id:"C", tab:"C · Pós-lançamento", part:"Parte C · 24/11 a 21/12", title:"As 4 semanas depois do lançamento",
+  sub:"Antes do lançamento a meta era a lista. Agora é uso: cada guincheiro anunciando rota, e só depois trazer quem precisa transportar.",
+  weeks:[
+  {n:"Semana 5 · 24/11 a 29/11",t:"Primeira rota",s:"Fazer cada Fundador anunciar a primeira rota. Rede vazia não atrai cliente.",
+   fora:["Mensagem pessoal para cada Fundador: “já anunciou tua primeira rota? Te ajudo agora”","Avisar nos grupos de WhatsApp e Facebook: “o GF abriu”, com o link","Repor os adesivos e flyers nos postos da BR-290 e BR-377"],
+   days:[
+   {d:"24",w:"ter",t:"Abrimos",tags:["st"],st:["“Ontem o GF abriu. [X] guincheiros já entraram.” (número real)","Repost do carrossel de lançamento","Caixinha: “Já anunciou tua rota? Deu alguma dúvida?”"]},
+   {d:"25",w:"qua",t:"Tutorial: anunciar o retorno",tags:["feed"],
+    feed:{what:"<b>Post 08</b> · Como anunciar seu retorno (carrossel de 5, prints reais do app)",cap:
+`Como anunciar seu retorno no GF em 1 minuto.
+
+1. Abra appdoguincheiro.com
+2. Toque em anunciar retorno
+3. Escolha de onde sai, para onde volta e o horário
+4. Diga o equipamento: plataforma, reboque, asa-delta
+5. Pronto: os pedidos que cabem no caminho aparecem pra você
+
+Salve este post e mande para o parceiro que ainda volta vazio.
+${H}`},
+    st:["Um passo por story","“Travou em algum passo? Chama no direct”"],
+    note:"Use os prints reais do app. Se algum passo tiver outro nome no app, ajuste o texto."},
+   {d:"26",w:"qui",t:"Primeiras rotas",tags:["st"],st:["Print das primeiras rotas anunciadas (sem nome nem telefone)","“Tua rota ainda não tá aqui?” + link"]},
+   {d:"27",w:"sex",t:"Reel 5: a primeira volta com frete",tags:["reel"],
+    roteiro:["0–3s · Fundador na cabine. Texto: “Primeira semana de GF.”","3–12s · Ele conta a rota que anunciou e o que apareceu no caminho","12–18s · Tela do app com a rota dele (dados reais, com autorização)","18–22s · “Ida com chamado. Volta com frete.” + appdoguincheiro.com"],
+    feed:{reel:true,what:"<b>Reel 5</b> · Depoimento de Fundador",cap:
+`Primeira semana de GF.
+
+[Nome], de [cidade], anunciou a volta de [origem] para [destino] e [o que aconteceu, em uma frase].
+
+Anuncie a sua: appdoguincheiro.com
+${H}`},
+    note:"Só com caso real e autorização por escrito. Se ninguém fechou frete ainda, o Reel vira “anunciei minha primeira rota” e não promete resultado."},
+   {d:"28",w:"sáb",t:"Bastidor",tags:["st"],st:["As dúvidas mais comuns da semana, com resposta curta","“Sábado também tem rota” + link"]},
+   {d:"29",w:"dom",t:"Gancho da semana",tags:["st"],st:["“Vai pegar estrada essa semana? Anuncia a volta hoje”","Enquete: “Já anunciou tua rota?” · Já / Ainda não"]}
+   ]},
+  {n:"Semana 6 · 30/11 a 06/12",t:"Quanto sobra?",s:"Mostrar a conta da volta vazia e usar a calculadora “Quanto sobra?” como motivo para abrir o app.",
+   fora:["Começar a série “Rota do dia” com rotas reais anunciadas","Pedir para 2 Fundadores gravarem a conta de um frete deles (Reel 6)"],
+   days:[
+   {d:"30",w:"seg",t:"Rota do dia #1",tags:["feed"],
+    feed:{what:"<b>Post 09</b> · Rota do dia (1 arte, série fixa)",cap:
+`Rota do dia.
+
+[Cidade] › [Cidade] · [dia, hora]
+[Equipamento] · [vagas]
+
+Tem um veículo para levar nesse caminho? Peça em appdoguincheiro.com e o guincheiro manda a proposta.
+
+Toda segunda tem rota nova aqui.
+${H}`},
+    note:"Só rota real anunciada no app e com autorização do guincheiro. Nunca mostre telefone."},
+   {d:"01",w:"ter",t:"Enquete",tags:["st"],st:["Enquete: “Tu sabe quanto sobra de um frete?” · Sei certinho / Mais ou menos","“Quinta a gente faz a conta junto”"]},
+   {d:"02",w:"qua",t:"Quanto custa voltar vazio?",tags:["feed"],
+    feed:{what:"<b>Post 10</b> · A conta da volta vazia (carrossel de 4)",cap:
+`Quanto custa voltar vazio?
+
+Exemplo: 250 km de volta, caminhão fazendo 4 km/l.
+250 ÷ 4 = 62,5 litros de diesel.
+62,5 × R$ [preço do diesel] = R$ [resultado] só de combustível.
+
+Sem contar pneu, freio e as horas sem faturar.
+
+No GF, a calculadora “Quanto sobra?” junta combustível, pedágio, manutenção e impostos numa conta só, a partir do valor de cada serviço.
+
+appdoguincheiro.com
+${H}`},
+    note:"É um exemplo e precisa aparecer como exemplo. Use o preço do diesel da semana na região."},
+   {d:"03",w:"qui",t:"Calculadora",tags:["st"],st:["Gravação de tela da calculadora “Quanto sobra?” com valores de exemplo","Caixinha: “Qual tua maior despesa na estrada?”"]},
+   {d:"04",w:"sex",t:"Reel 6: guincheiro faz a conta",tags:["reel"],
+    roteiro:["0–3s · Texto: “Quanto sobrou desse frete?”","3–14s · Guincheiro real põe os números na calculadora","14–20s · Resultado na tela","20–24s · “Faz a tua conta: appdoguincheiro.com”"],
+    feed:{reel:true,what:"<b>Reel 6</b> · Calculadora com guincheiro real",cap:
+`Quanto sobrou desse frete?
+
+Diesel, pedágio, manutenção e imposto numa conta só. Faça a sua no GF.
+
+appdoguincheiro.com
+${H}`},
+    note:"Se ele não quiser mostrar o valor real, use valores de exemplo e diga isso na tela."},
+   {d:"05",w:"sáb",t:"Rota do dia",tags:["st"],st:["Rota real anunciada hoje","Link: “Precisa levar um veículo nesse caminho?”"]},
+   {d:"06",w:"dom",t:"Respostas",tags:["st"],st:["As despesas mais citadas na caixinha","“Segunda tem Rota do dia”"]}
+   ]},
+  {n:"Semana 7 · 07/12 a 13/12",t:"Quem precisa transportar",s:"Começar a falar com o cliente (o Post 07 que ficou para depois) sem confundir com socorro de emergência.",
+   fora:["Flyer com QR para oficinas, revendas e despachantes de Alegrete, Uruguaiana e Santa Maria: “Precisa levar um veículo para outra cidade?”","Avisar os guincheiros: “essa semana a gente chama os clientes, deixa tua rota anunciada”"],
+   days:[
+   {d:"07",w:"seg",t:"Guincheiro ajuda guincheiro: repasse",tags:["feed"],
+    feed:{what:"<b>Post 11</b> · Como repassar um serviço (carrossel de 3)",cap:
+`Chamado longe demais? Agenda cheia?
+
+No GF você repassa o serviço para um colega que está perto, em vez de perder o cliente.
+
+O cliente é atendido, o colega trabalha e ninguém volta vazio.
+
+Guincheiro ajuda guincheiro.
+appdoguincheiro.com
+${H}`},
+    note:"Mostre os prints reais do repasse no app."},
+   {d:"08",w:"ter",t:"Agora para quem precisa transportar",tags:["st"],st:["“Comprou um carro em outra cidade? Carro parado longe de casa?”","“No GF tu pede uma vez e recebe propostas” + link"]},
+   {d:"09",w:"qua",t:"Precisou? Chamou. Chegou.",tags:["feed"],
+    feed:{what:"<b>Post 07</b> · Para quem precisa transportar (o post que ficou para depois)",cap:
+`Precisou? Chamou. Chegou.
+
+Precisa levar um carro, moto, utilitário ou caminhão para outra cidade? No GF você pede uma vez e recebe propostas de guincheiros conferidos que já vão passar pelo caminho.
+
+Compare valor, prazo e nota. Acompanhe cada etapa até a entrega.
+
+Grátis para pedir. appdoguincheiro.com
+${HC}`},
+    note:"O GF é transporte combinado, não socorro de emergência. Não use “na hora” nem “24h”."},
+   {d:"10",w:"qui",t:"Passo a passo do pedido",tags:["st"],st:["Diga o que precisa: de onde, para onde, qual veículo","Compare propostas: valor, prazo e nota","Acompanhe: a caminho, no local, em transporte, entregue","Link"]},
+   {d:"11",w:"sex",t:"Reel 7: do pedido à entrega",tags:["reel"],
+    roteiro:["0–3s · Texto: “Carro em Uruguaiana, dono em Alegrete.”","3–10s · Pedido feito no app","10–18s · Etapas: a caminho, no local, em transporte","18–22s · Entregue. “Precisou? Chamou. Chegou.” + appdoguincheiro.com"],
+    feed:{reel:true,what:"<b>Reel 7</b> · Um transporte de verdade, do pedido à entrega",cap:
+`Do pedido à entrega.
+
+Você pede, compara as propostas e acompanha cada etapa no celular.
+
+appdoguincheiro.com
+${HC}`},
+    note:"Caso real com autorização do cliente e do guincheiro. Placa e rosto borrados se não autorizarem."},
+   {d:"12",w:"sáb",t:"Situações",tags:["st"],st:["Enquete: “Já precisou levar um carro para outra cidade?” · Já / Nunca","“Marca quem tá comprando carro fora”"]},
+   {d:"13",w:"dom",t:"Gancho da semana",tags:["st"],st:["“Semana que vem: dinheiro que demora para cair”","Contagem regressiva para segunda, 8h"]}
+   ]},
+  {n:"Semana 8 · 14/12 a 21/12",t:"Fim de ano na estrada",s:"Apresentar a antecipação com cuidado e fechar o primeiro mês com números reais.",
+   fora:["Revisar com a JK Invest o texto do Post 12 antes de postar","Mensagem para os Fundadores: “um mês de GF, o que falta?”"],
+   days:[
+   {d:"14",w:"seg",t:"Fez o serviço? Receba antes.",tags:["feed"],
+    feed:{what:"<b>Post 12</b> · Antecipação de recebíveis (1 arte)",cap:
+`Seguradora pagando em 30, 60 dias?
+
+No GF você pede a antecipação do que tem a receber, direto no app, em Serviços › Antecipar.
+
+Quem analisa, define a taxa e paga é a JK Invest, securitizadora parceira (CNPJ 53.662.389/0001-05). A taxa vem na proposta, antes de você aceitar. Sujeito a aprovação.
+
+Aprovado, o dinheiro cai em até 3 horas.
+Vale para pessoa física, MEI e empresa. Valores pagos por TED não entram.
+
+appdoguincheiro.com
+${H}`},
+    note:"Só poste se a antecipação estiver funcionando e a JK Invest aprovar o texto. Nunca use “garantido”, “sem taxa” ou “dinheiro grátis”."},
+   {d:"15",w:"ter",t:"Dezembro na estrada",tags:["st"],st:["“Dezembro: mais estrada, mais volta vazia”","“Anuncia tuas voltas das festas” + link"]},
+   {d:"16",w:"qua",t:"Mapa da rede",tags:["feed"],
+    feed:{what:"<b>Post 13</b> · Mapa da rede (1 arte, só rotas reais)",cap:
+`Um mês de GF no mapa.
+
+Estas são as rotas que os guincheiros já anunciaram no RS.
+
+A sua não está aí? Anuncie em appdoguincheiro.com
+${H}`}},
+   {d:"17",w:"qui",t:"Depoimento",tags:["st"],st:["Fundador em 10s: “o que mudou no meu mês” (com autorização)","Link"]},
+   {d:"18",w:"sex",t:"Reel 8: um mês de GF",tags:["reel"],
+    roteiro:["0–4s · Mapa do RS vazio. Texto: “23 de novembro…”","4–12s · As rotas aparecendo","12–18s · Números reais: guincheiros, rotas anunciadas, fretes fechados","18–22s · “Obrigado, rede.” + appdoguincheiro.com"],
+    feed:{reel:true,what:"<b>Reel 8</b> · Um mês de GF",cap:
+`Um mês de GF.
+
+[X] guincheiros, [Y] rotas anunciadas, [Z] fretes no caminho.
+
+Obrigado, rede. Guincheiro ajuda guincheiro.
+appdoguincheiro.com
+${H}`},
+    note:"Só números reais. Se algum for baixo, tire do Reel em vez de arredondar."},
+   {d:"19",w:"sáb",t:"Rota do dia",tags:["st"],st:["Rota real de fim de ano","Link"]},
+   {d:"20",w:"dom",t:"Fim de ano",tags:["st"],st:["“Vai pegar estrada nas festas? Anuncia a volta”","Caixinha: “O que tu quer ver no GF em 2027?”"]},
+   {d:"21",w:"seg",t:"Obrigado, rede",tags:["feed"],
+    feed:{what:"<b>Post 14</b> · Fechamento do primeiro mês",cap:
+`Obrigado, rede.
+
+Em um mês, guincheiros de [cidades] começaram a anunciar a volta e pegar frete no caminho.
+
+Em 2027 a gente segue com quem roda de guincho no RS. Conte nos comentários o que você quer ver no GF.
+
+GF · Conexões que movem.
+${H}`},
+    note:"Não anuncie função, cidade ou preço que ainda não está decidido."}
+   ]}
+  ],
+  ready:[
+   {h:"Gravações",li:["Até 25/11 · prints reais do app para o tutorial","Até 26/11 · depoimento de Fundador (Reel 5)","Até 03/12 · guincheiro na calculadora (Reel 6)","Até 10/12 · um transporte real, do pedido à entrega (Reel 7)"]},
+   {h:"Artes",li:["Modelo fixo “Rota do dia” (feed e story)","Carrossel “Quanto custa voltar vazio?”","Arte da antecipação (com texto aprovado pela JK Invest)","Mapa da rede atualizado em 16/12"]},
+   {h:"Decidir",li:["Até 01/12 · se o Post 07 já vai para o cliente final (só se houver rotas anunciadas suficientes)","Até 10/12 · se a antecipação já está no ar","Até 15/12 · se a fase grátis continua em 2027"]},
+   {h:"Acompanhar toda segunda",li:["Fundadores que já anunciaram ao menos 1 rota","Rotas anunciadas e cidades","Pedidos de transporte e propostas enviadas","Fretes fechados (o que o guincheiro contar)","Seguidores e alcance dos reels"]}
+  ]}
+];
+
+const KEY="gf-plano-feitos";
+const done=JSON.parse(localStorage.getItem(KEY)||"{}");
+const esc=s=>s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+const tagHtml=t=>{const c=t==="reel"?"reel":t==="st"?"st":t==="arte nova"?"art":"";return `<span class="tag ${c}">${t==="st"?"stories":t}</span>`};
+
+function dayHtml(p,day,i){
+  const id=p.id+"-"+(day.k||day.d)+"-"+i;
+  let h=`<div class="day ${done[id]?"done":""}" data-id="${id}"><div class="hd"><div class="date"><b>${day.d}</b><small>${day.w}</small></div><div class="ttl"><b>${day.t}</b><div>${day.tags.map(tagHtml).join("")}</div></div><label class="ck"><input type="checkbox" ${done[id]?"checked":""}> Feito</label></div>`;
+  if(day.roteiro) h+=`<div class="sec"><div class="lbl reel">Reel · roteiro</div><ol class="n">${day.roteiro.map(r=>`<li>${esc(r)}</li>`).join("")}</ol></div>`;
+  if(day.feed) h+=`<div class="sec"><div class="lbl ${day.feed.reel?"reel":""}">${day.feed.reel?"Reel · legenda":"Feed"}<button data-copy>Copiar legenda</button></div><p class="what">${day.feed.what}</p><pre>${esc(day.feed.cap)}</pre></div>`;
+  if(day.slides) h+=`<div class="sec"><div class="lbl art">Texto da arte</div><div class="slides">${day.slides.map(s=>`<div class="slide"><small>${s[0]}</small><p>${esc(s[1])}</p></div>`).join("")}</div></div>`;
+  if(day.st) h+=`<div class="sec"><div class="lbl st">Stories</div><ol class="n">${day.st.map(s=>`<li>${esc(s)}</li>`).join("")}</ol></div>`;
+  if(day.chg||day.note) h+=`<div class="sec">${day.chg?`<div class="chg">O que mudou: ${esc(day.chg)}</div>`:""}${day.note?`<div class="note">${esc(day.note)}</div>`:""}</div>`;
+  return h+"</div>";
+}
+
+function render(f){
+  let h="";
+  PARTS.forEach(p=>{
+    if(f!=="all"&&f!==p.id) return;
+    h+=`<div class="part">${p.part}</div><h2>${p.title}</h2><p class="sub">${p.sub}</p>`;
+    (p.boxes||[]).forEach(b=>h+=`<div class="box"><h4>${b.h}</h4><ul>${b.li.map(l=>`<li>${esc(l)}</li>`).join("")}</ul></div>`);
+    (p.days||[]).forEach((d,i)=>h+=dayHtml(p,d,i));
+    (p.weeks||[]).forEach((w,wi)=>{
+      h+=`<div class="part">${w.n}</div><h2>${w.t}</h2><p class="sub">${w.s}</p><div class="box"><h4>Fora do Instagram</h4><ul>${w.fora.map(l=>`<li>${esc(l)}</li>`).join("")}</ul></div>`;
+      w.days.forEach((d,i)=>h+=dayHtml(p,Object.assign({k:wi+"-"+d.d},d),i));
+    });
+    if(p.ready) h+=`<div class="part">Para ter pronto</div><div class="grid">${p.ready.map(b=>`<div class="box"><h4>${b.h}</h4><ul>${b.li.map(l=>`<li>${esc(l)}</li>`).join("")}</ul></div>`).join("")}</div>`;
+  });
+  document.getElementById("app").innerHTML=h;
+  prog();
+}
+function prog(){
+  const all=document.querySelectorAll(".day").length, n=document.querySelectorAll(".day.done").length;
+  document.getElementById("prog").style.width=(all?100*n/all:0)+"%";
+  document.getElementById("progt").textContent=n+" de "+all+" feitos";
+}
+const tabs=[["all","Tudo"]].concat(PARTS.map(p=>[p.id,p.tab]));
+document.getElementById("tabs").innerHTML=tabs.map((t,i)=>`<button data-f="${t[0]}" class="${i?"":"on"}">${t[1]}</button>`).join("");
+document.getElementById("tabs").onclick=e=>{const b=e.target.closest("button");if(!b)return;document.querySelectorAll(".tabs button").forEach(x=>x.classList.toggle("on",x===b));render(b.dataset.f)};
+document.getElementById("app").addEventListener("click",e=>{
+  const c=e.target.closest("[data-copy]");
+  if(c){const pre=c.closest(".sec").querySelector("pre");navigator.clipboard.writeText(pre.textContent).then(()=>{c.textContent="Copiado!";setTimeout(()=>c.textContent="Copiar legenda",1500)});}
+});
+document.getElementById("app").addEventListener("change",e=>{
+  if(e.target.type!=="checkbox")return;const d=e.target.closest(".day");done[d.dataset.id]=e.target.checked;localStorage.setItem(KEY,JSON.stringify(done));d.classList.toggle("done",e.target.checked);prog();
+});
+render("all");
+</script>
+</body>
+</html>
